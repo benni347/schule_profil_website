@@ -1,0 +1,15 @@
+body {
+    font-size: 1em;
+}
+
+.aufgabe_1 {
+    background: #ffff00;
+}
+
+.aufgabe_2 {
+    background: #00f;
+}
+
+h1 {
+    text-align: center;
+}
