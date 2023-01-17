@@ -70,6 +70,12 @@
 - `<a href="https://example.com">Linkname</a>`
   - Link auf ein anderes HTML Dokument oder Webseite
 
+- `<link rel="icon" href="Ordnername/icon.png>`
+  - Favicon im Tab anzeigen
+
+- `<img src="Ordner/bild.png width="400" height="400">`
+  - Relativer Pfad angeben/ Bild einfügen/ Breite und Höhe in pixel/ lokaler Ort
+
 ## CSS
 
 - **CSS**
