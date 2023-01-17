@@ -87,6 +87,56 @@
 -   `<img src="Ordner/bild.png width="400" height="400">`
     -   Relativer Pfad angeben/ Bild einfügen/ Breite und Höhe in pixel/ lokaler Ort
 
+```html
+<table border="1">
+    <colgroup>
+        <col width="150">  <!-- Spaltenbreite 1 150px -->
+        <col width="300">  <!-- Spaltenbreite 2 300px -->
+    </colgroup>
+    <tr>
+        <td>
+            Inhalt Zelle 1
+        </td>
+        <td>
+            Inhalt Zelle 2
+        </td>
+    </tr>
+    <tr>
+        <td>
+            Inhalt Zelle 3
+        </td>
+        <td>
+            Inhalt Zelle 4
+        </td>
+    </tr>
+</table>
+```
+
+![table.png](table.png)
+
+- `<tr> </tr>`
+  - Zeile erzeugen
+
+- `<td> </td>`
+  - Spalte erzeugen
+
+```html
+<h2>Listenüberschrift</h2>
+<ul>  <!-- Starte eine unordered-list -->
+    <li>Punkt 1</li>
+    <li>Punkt 2</li>
+    <li>Punkt 3</li>
+</ul>
+```
+
+```html
+<ol type="I">  <!-- Starte eine ordered list mit grossen römischen Zahlen -->
+    <li>Punkt 1</li>
+    <li>Punkt 2</li>
+    <li>Punkt 3</li>
+</ol>
+```
+
 ## CSS
 
 -   **CSS**
