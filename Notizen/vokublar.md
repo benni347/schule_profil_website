@@ -90,39 +90,35 @@
 ```html
 <table border="1">
     <colgroup>
-        <col width="150">  <!-- Spaltenbreite 1 150px -->
-        <col width="300">  <!-- Spaltenbreite 2 300px -->
+        <col width="150" />
+        <!-- Spaltenbreite 1 150px -->
+        <col width="300" />
+        <!-- Spaltenbreite 2 300px -->
     </colgroup>
     <tr>
-        <td>
-            Inhalt Zelle 1
-        </td>
-        <td>
-            Inhalt Zelle 2
-        </td>
+        <td>Inhalt Zelle 1</td>
+        <td>Inhalt Zelle 2</td>
     </tr>
     <tr>
-        <td>
-            Inhalt Zelle 3
-        </td>
-        <td>
-            Inhalt Zelle 4
-        </td>
+        <td>Inhalt Zelle 3</td>
+        <td>Inhalt Zelle 4</td>
     </tr>
 </table>
 ```
 
 ![table.png](table.png)
 
-- `<tr> </tr>`
-  - Zeile erzeugen
+-   `<tr> </tr>`
 
-- `<td> </td>`
-  - Spalte erzeugen
+    -   Zeile erzeugen
+
+-   `<td> </td>`
+    -   Spalte erzeugen
 
 ```html
 <h2>Listenüberschrift</h2>
-<ul>  <!-- Starte eine unordered-list -->
+<ul>
+    <!-- Starte eine unordered-list -->
     <li>Punkt 1</li>
     <li>Punkt 2</li>
     <li>Punkt 3</li>
@@ -130,7 +126,8 @@
 ```
 
 ```html
-<ol type="I">  <!-- Starte eine ordered list mit grossen römischen Zahlen -->
+<ol type="I">
+    <!-- Starte eine ordered list mit grossen römischen Zahlen -->
     <li>Punkt 1</li>
     <li>Punkt 2</li>
     <li>Punkt 3</li>

@@ -10,4 +10,3 @@ Das wurde uns im Unterricht gegeben.
 Heute haben wir eine simple `Hello, World!` Webseite geschrieben.
 Zudem hatten wir eine Aufgabe erhalten um zwei Websieten zu schreiben nach der Aufgabenstellung
 im [Auftrag 1](2023_01_10_aufgabe_1/Aufgabe%201.docx).
-
