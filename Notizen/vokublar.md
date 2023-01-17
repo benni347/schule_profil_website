@@ -4,84 +4,95 @@
 
 <!--toc:start-->
 
-- [Vokabular](#vokabular)
-  - [HTML](#html)
-  - [CSS](#css)
-  - [JS](#js)
-  <!--toc:end-->
+-   [Vokabular](#vokabular)
+    -   [HTML](#html)
+    -   [CSS](#css)
+    -   [JS](#js)
+    <!--toc:end-->
 
 ## HTML
 
-- **HTML**
+-   **HTML**
 
-  - Hyper Text Markup Language
+    -   Hyper Text Markup Language
 
-- `<Befehl-Start>` `</Befehl-Stop>`
+-   `<Befehl-Start>` `</Befehl-Stop>`
 
 ```html
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8"/>
-  <title>Hello, World!</title>
-</head>
+    <head>
+        <meta charset="UTF-8" />
+        <title>Hello, World!</title>
+    </head>
 
-<body>
-<h1>Hello, World!</h1>
-</body>
+    <body>
+        <h1>Hello, World!</h1>
+    </body>
 </html>
 ```
 
-- `<h1>Text</h1>`
-  - Schreibt einen Titel aus, h1, h2, h3
-  - Die Zahlen Stehen für die Grösse
-  - Heading
+-   `<h1>Text</h1>`
 
-- `<!-- Kommentar -->`
-  - Ist ein Text Kommentar
+    -   Schreibt einen Titel aus, h1, h2, h3
+    -   Die Zahlen Stehen für die Grösse
+    -   Heading
 
-- `<p> Neue Zeile </p>`
-  - Neue Zeile für Text Generieren
-  - Paragraph
+-   `<!-- Kommentar -->`
 
-- `<h1 style="text-align: center">Text</h1>`
-  - Titel h1 Zentriert
-  - Möglichkeiten
-    - left
-    - right
-    - center
+    -   Ist ein Text Kommentar
 
-- `<b>fett</b>`
-  - Der Text wird Fett geschrieben
+-   `<p> Neue Zeile </p>`
 
-- `<i>kursiv</i>`
-  - Der Text wird Kursiv geschrieben
+    -   Neue Zeile für Text Generieren
+    -   Paragraph
 
-- `<br>`
-  - Absatz
-  - "Enter"
+-   `<h1 style="text-align: center">Text</h1>`
 
-- `<body style="background: red">`
-  - Hintergrundfarbe rot
+    -   Titel h1 Zentriert
+    -   Möglichkeiten
+        -   left
+        -   right
+        -   center
 
-- `<span style="color: #FF0000; "> Hallo, ich bin ein roter Text</span>`
-  - Roter Text als HEX Code
+-   `<b>fett</b>`
 
-- `<a href="https://example.com">Linkname</a>`
-  - Link auf ein anderes HTML Dokument oder Webseite
+    -   Der Text wird Fett geschrieben
 
-- `<link rel="icon" href="Ordnername/icon.png>`
-  - Favicon im Tab anzeigen
+-   `<i>kursiv</i>`
 
-- `<img src="Ordner/bild.png width="400" height="400">`
-  - Relativer Pfad angeben/ Bild einfügen/ Breite und Höhe in pixel/ lokaler Ort
+    -   Der Text wird Kursiv geschrieben
+
+-   `<br>`
+
+    -   Absatz
+    -   "Enter"
+
+-   `<body style="background: red">`
+
+    -   Hintergrundfarbe rot
+
+-   `<span style="color: #FF0000; "> Hallo, ich bin ein roter Text</span>`
+
+    -   Roter Text als HEX Code
+
+-   `<a href="https://example.com">Linkname</a>`
+
+    -   Link auf ein anderes HTML Dokument oder Webseite
+
+-   `<link rel="icon" href="Ordnername/icon.png>`
+
+    -   Favicon im Tab anzeigen
+
+-   `<img src="Ordner/bild.png width="400" height="400">`
+    -   Relativer Pfad angeben/ Bild einfügen/ Breite und Höhe in pixel/ lokaler Ort
 
 ## CSS
 
-- **CSS**
-  - Cascading Style Sheets
+-   **CSS**
+    -   Cascading Style Sheets
 
 ## JS
 
-- **JS**
-  - JavaScript
+-   **JS**
+    -   JavaScript

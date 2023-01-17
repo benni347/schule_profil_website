@@ -4,5 +4,8 @@
   "semi": false,
   "singleQuote": false,
   "useTabs": false,
-  "bracketSameLine": true
+  "bracketSameLine": false,
+  "endOfLine": "lf",
+  "embeddedLanguageFormatting": "auto",
+  "singleAttributePerLine": true
 }
