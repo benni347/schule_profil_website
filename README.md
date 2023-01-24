@@ -25,3 +25,5 @@ im [Auftrag 1](2023_01_10_aufgabe_1/Aufgabe%201.docx).
 Heute mussten wir eine Webseite schreiben, welche ein Bild mit einer Webseite verlinkt.
 
 ## 2022_01_24
+
+Heute haben wir das Material von den letzten malen repetiert. Die Aufgabe von Heute ist es eine Webseite mit `maps` zu erstellen.
