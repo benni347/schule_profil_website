@@ -1,3 +1,7 @@
+:root {
+    --small_padding: 0.5em;
+}
+
 body {
     text-align: center;
     font-size: 2em;
@@ -16,12 +20,6 @@ body {
     position: relative;
     grid-row: 1 / 2;
 }
-.technical-unit:hover .preview-popup {
-    display: block;
-}
-.preview-popup {
-    display: none;
-}
 .grid-container {
     display: grid;
     grid-template-rows: auto 1fr auto; /* header, content, footer */
@@ -39,11 +37,11 @@ body {
 }
 .right-content {
     flex: 1;
-    padding-left: 0.5em;
+    padding-left: var(--small_padding);
     width: 220px;
     border-left: 0.5px solid rgba(005, 005, 005, 0.1);
 }
 .main-content {
     display: inline-block;
-    padding-right: 0.5em;
+    padding-right: var(--small_padding);
 }
