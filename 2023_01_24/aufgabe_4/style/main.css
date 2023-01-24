@@ -1,0 +1,25 @@
+* {
+    font-size: 1.5rem;
+}
+body {
+    text-align: center;
+    background-color: rgba(245, 245, 220, 1); /* off-white (eggshell white) */
+    /*background-color: rgba(255, 255, 240, 1); !* Ivory *!*/
+}
+#elementar {
+    width: 1920px;
+    aspect-ratio: inherit;
+}
+.back {
+    position: absolute;
+    left: 0;
+}
+.title {
+    position: relative;
+}
+.technical-unit:hover .preview-popup {
+    display: block;
+}
+.preview-popup {
+    display: none;
+}

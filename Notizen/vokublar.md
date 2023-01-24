@@ -134,6 +134,31 @@
 </ol>
 ```
 
+- `<img src="Ordnername/img.jpg" width="400" height="auto" usemap="#map_1" />`
+  - Ein Bild anzeigen lassen, Grösse definieren, Bild als Map definieren
+
+```html
+<img
+    src="pics/mathe.jpg"
+    alt="Mathe symbole"
+    usemap="#map_1"
+/>
+<map name="map_1">
+    <area
+        shape="rect"
+        coords="0,0,450,330"
+        href="download/herzige_mathe.jpg"
+        download="Hier gelangst du zu der herzigen Mathematik"
+        alt="Mathe"
+    />
+</map>
+```
+- Bild und Map  
+  - Ein Bild anzeigen lassen, Grösse definieren, Bild als Map definieren
+  - Map anlegen, Form Festlegen
+  - Download datei festlegen
+  - Download namen festlegen
+
 ## CSS
 
 -   **CSS**

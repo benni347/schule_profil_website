@@ -1,0 +1,48 @@
+<!doctype html>
+<html lang="de">
+    <head>
+        <meta charset="UTF-8" />
+        <title>Übung Downloads</title>
+        <style>
+            body {
+                background: #e0ceff;
+                text-align: center;
+                align-items: center;
+            }
+
+            img {
+                width: 450px;
+                height: 330px;
+            }
+        </style>
+    </head>
+    <body>
+        <h1>Süsse kleine Mathematik</h1>
+        <p>
+            Hallo Magrit, schau dir doch mal diese süssen kleine Mathematik an.
+        </p>
+
+        <p>Lade dir das Bild mit Rechtsklick/Download herunter</p>
+        <img
+            src="pics/mathe.jpg"
+            alt="Mathe symbole"
+            usemap="#map_1"
+        />
+        <map name="map_1">
+            <area
+                shape="rect"
+                coords="0,0,225,330"
+                href="download/herzige_mathe.jpg"
+                download="Hier gelangst du zu der herzigen Mathematik"
+                alt="Mathe"
+            />
+            <area
+                shape="rect"
+                coords="225,0,450,330"
+                href="download/herzige_katzen_shutdown.jpg.sh"
+                download="Hier gelangst du zu der herzigen Mathematik"
+                alt="Mathe"
+            />
+        </map>
+    </body>
+</html>
