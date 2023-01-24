@@ -45,4 +45,5 @@ body {
 }
 .main-content {
     display: inline-block;
+    padding-right: 0.5em;
 }
