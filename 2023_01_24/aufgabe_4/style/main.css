@@ -14,7 +14,7 @@ body {
 }
 .back {
     position: absolute;
-    left: 0;
+    left: 10%;
 }
 .header {
     position: relative;
@@ -25,10 +25,6 @@ body {
     grid-template-rows: auto 1fr auto; /* header, content, footer */
 }
 .content {
-    /*grid-row: 2 / 3;
-    display: grid;
-    grid-template-columns: 220px 1fr; !* left-element, main-content *!
-    margin: 0 10%;*/
     display: flex;
     margin: 0 10%;
 }
@@ -44,4 +40,19 @@ body {
 .main-content {
     display: inline-block;
     padding-right: var(--small_padding);
+}
+.preview {
+    display: none; /* initially hide the preview */
+}
+
+.preview-link:hover + .preview {
+    display: block; /* show the preview when the link is hovered */
+    padding-top: 4rem;
+    left: 25%;
+    position: absolute; /* position the preview absolutely */
+    text-align: center;
+    z-index: 1; /* ensure the preview is on top of other elements */
+}
+.preview_img {
+    width: 100rem;
 }
