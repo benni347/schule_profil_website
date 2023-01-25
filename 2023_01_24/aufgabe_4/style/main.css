@@ -43,6 +43,9 @@ body {
 }
 .preview {
     display: none; /* initially hide the preview */
+    margin: 0 auto; /* center the preview horizontally */
+    text-align: center; /* center the content inside the preview */
+    width: 50%; /* set the width of the preview */
 }
 
 .preview-link:hover + .preview {
@@ -50,9 +53,8 @@ body {
     padding-top: 4rem;
     left: 25%;
     position: absolute; /* position the preview absolutely */
-    text-align: center;
     z-index: 1; /* ensure the preview is on top of other elements */
 }
 .preview_img {
-    width: 100rem;
+    width: 75%;
 }
