@@ -164,6 +164,16 @@
 -   **CSS**
     -   Cascading Style Sheets
 
+```html
+<link
+    rel="stylesheet"
+    type="text/css"
+    href="style/style.css"
+/>
+```
+
+- Verlinkungen zu CSS Datei im Head.
+
 ## JS
 
 -   **JS**
