@@ -174,6 +174,78 @@
 
 - Verlinkungen zu CSS Datei im Head.
 
+`background-repeat: no-repeat`
+
+- keine Wiederholung
+
+`background-repeat: repeat-x`
+
+- Wiederholung in X-Achse
+
+`background-position: right top;`
+
+- Oben rechts, (Cover, Center, Left, etc.) Pixel / % möglich.
+
+`background-attachment: fixed;`
+
+- Fixiert, auch bei scrollen (center center für zentriert)
+
+`background-size: 240px 100px;`
+
+- Grösse Hintergrund, oder "auto" oder 100% f. g. Screen
+
+`background-size: cover;`
+
+- Hintergund deckt ganze Fläche ab
+
+`position: absolute;`
+
+- "Absolute" Position angeben
+
+`z-index: 1;`
+
+- Tiefe in Z-Richtung
+
+`border: 2 px solid black;`
+
+- Linie an Rand 2px breit. (border-top/bottom/left/right auch möglich)
+
+`top: 200px; / top: 20%;`
+
+- Abstand vom oberen Rand: „In Pixel“ oder in "%".
+
+`left: 310px;`
+
+- Abstand vom linken Rand: „In Pixel“.
+
+`width: 500px;`
+
+- Breite: In Pixel
+
+`font-family: Calibri;`
+
+- Schriftarten (Arial, Times New Roman, etc.)
+
+`font-size: 10px;`
+
+- Schriftgrösse 10               
+
+`text-align: center;`
+
+- Ausrichtung (left, center, right, block)
+
+`color: black;`
+
+- Schriftfarbe: (rgb code, black)
+
+`background-color: #665590;`
+
+- Hintergrundfarbe: rgb code, blue)
+
+`background: url("design/header.gif");`
+
+- Hintergrund „header“
+
 ## JS
 
 -   **JS**
