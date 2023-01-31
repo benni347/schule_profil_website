@@ -1,8 +1,27 @@
 body {
-    background: rgba(116, 255, 161, 0.31);
+    position: absolute;
+    text-align: center;
+    left: 15vw;
+    top: 10vh;
+    right: 10vw;
+    font-family: monospace;
+    color: gray;
+    background-repeat: no-repeat;
+    background-image: url("../design/banner.jpg");
+    background-attachment: fixed;
+    background-size: 25vw 10vh;
 }
 
-.header {
+h1 {
+    color: #f00;
+    border-bottom: 2px solid black;
+    font-size: 5rem;
+}
+
+p {
     color: #004eff;
-    text-align: center;
+}
+
+a {
+    text-decoration: none;
 }
