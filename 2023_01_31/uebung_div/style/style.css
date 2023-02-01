@@ -1,0 +1,10 @@
+#pic1 {
+    position: absolute;
+    left: 25%;
+}
+
+.copyright {
+    position: fixed;
+    bottom: 2%;
+    left: 10%;
+}
