@@ -37,12 +37,14 @@ body {
     margin: 0 10%;
 }
 .footer {
-    position: relative;
+    border-top: 1px solid #000;
+    position: fixed;
     bottom: 2.5vh;
-    left: -35vw;
+    left: 10%;
     padding-left: 0;
     margin-left: 0;
     grid-row: 3 / 4;
+    font-size: 0.75em;
 }
 .right-content {
     flex: 1;
@@ -74,9 +76,10 @@ body {
     height: auto;
 }
 .footer_main_index {
+    font-size: 0.75em;
     position: fixed;
-    bottom: 2.5%;
-    left: 2.5%;
+    bottom: 2.5vh;
+    left: 10%;
 }
 .lds-ring {
     display: inline-block;
