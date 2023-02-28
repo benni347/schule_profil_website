@@ -159,6 +159,29 @@
   - Download datei festlegen
   - Download namen festlegen
 
+```html
+<audio>
+    <source src="ordner/music.mp3" type="audio/mp3">
+</audio>
+```
+- Atribute
+    - autoplay
+    - muted
+    - controls
+    - loop
+
+```html
+<video>
+    <source src="ordner/music.mp4" type="video/mp4">
+</video>
+```
+- Atribute
+    - autoplay
+    - muted
+    - controls
+    - loop
+
+
 ## CSS
 
 -   **CSS**
