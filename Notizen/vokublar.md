@@ -269,6 +269,73 @@
 
 - Hintergrund „header“
 
+### Font
+```html
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;500;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu:wght@300;500;700&display=swap');
+.text {
+    font-family: Roboto, sans-serif;
+}
+
+h1 {
+  font-size: 30pt;
+  font-weight: 700;
+}
+
+p {
+  font-family: Ubuntu;
+  font-weight: 200;
+}
+```
+- Schrift importieren
+- Font setzten
+- Font Size und weight ändern
+
+#### Link Styling
+
+```html
+a:link {
+  color: #f0f0f0;
+}
+```
+
+- Unvisited
+
+```html
+a:hover {
+  color: #0f0f0f;
+  text-decoration: wavy underline;
+}
+```
+
+- Hover
+
+```html
+a:active {
+  color: #fff000;
+  text-decoration: underline;
+}
+```
+
+- Beim Drauf drücken
+
+```html
+a:visited {
+  color: #00f0ff;
+  text-decoration: overline;
+}
+```
+
+- Wenn beretis webseite besucht wurde
+
+```html
+a {
+  text-decoration: none;
+}
+```
+
+- Standard
+
 ## JS
 
 -   **JS**
