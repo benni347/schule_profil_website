@@ -29,7 +29,9 @@
 - TTS:
   - An option in the settings menu where the text from the unknown entity is outputted with a TTS engine, so the user doesn't have to read.
   - TTS Engines:
-    - Google TTS
     - AWS Polly
+      - Male
+      - Female
+        - Joanna
 - Physic Constraints
   - Don't allow the user to break the modern understanding of physics by transmitting information faster than the speed of light.
