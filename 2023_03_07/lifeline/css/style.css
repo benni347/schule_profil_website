@@ -1,5 +1,7 @@
 :root {
   --background-color: rgba(30, 30, 30, 0.90);
+  --lighter-background-color: rgba(50, 50, 50, 0.3);
+
 }
 
 body {
@@ -57,28 +59,51 @@ header {
 }
 
 .header_child {
-  background-color: rgba(50, 50, 50, 0.3);
+  background-color: var(--lighter-background-color); 
   padding: 0.5rem;
   justify-items: center;
   align-content: center;
 }
 
 .sidebar {
-  height: 100%;
-  width: 200px;
+  height: 100vh;
+  width: 30vw;
   position: fixed;
   top: 0;
-  background-color: #f1f1f1;
+  color: rgba(240, 240, 240, 1);
+  background-color: rgba(20, 20, 20, 1.0); 
   overflow-x: hidden;
   padding-top: 20px;
   transition: transform 0.3s ease-in-out; /* add transition effect */
 }
 
+.main {
+
+}
+
 .sidebar_visible {
-  transform: translateX(0);
+  transition: all 3s ease-in-out;
   right: 0;
 }
 
 .sidebar_closed {
-  left: -200px; /* off-screen */
+  left: -2000vw; /* off-screen */
+}
+
+.content_settings_visibile {
+  opacity: 0.2;
+}
+
+.grid-container {
+  display: grid;
+  grid-template-rows: ;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  * {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
 }
