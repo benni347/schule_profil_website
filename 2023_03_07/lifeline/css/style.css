@@ -16,7 +16,7 @@ header {
   align-items: center;
   background-color: var(--background-color);
   color: #fff;
-  padding: 10px;
+  padding-top: 0.5%;
   position: fixed;
   top: 0;
   left: 0;
@@ -77,12 +77,12 @@ header {
   transition: transform 0.3s ease-in-out; /* add transition effect */
 }
 
-.main {
-
+main {
+  grid-area: main;
 }
 
 .sidebar_visible {
-  transition: all 3s ease-in-out;
+  transition: all 0.3s ease-in-out;
   right: 0;
 }
 
@@ -94,9 +94,22 @@ header {
   opacity: 0.2;
 }
 
-.grid-container {
+.grid_container {
   display: grid;
-  grid-template-rows: ;
+  grid-template-rows: auto 1fr auto;
+	grid-template-areas: "header" "main" "footer";
+  height: 100vh;
+}
+
+.header {
+  grid-area: header;
+}
+
+footer {
+	background-color: lightgray;
+	text-align: left;
+	grid-area: footer;
+	padding-left: 5rem;
 }
 
 @media (prefers-reduced-motion: reduce) {
