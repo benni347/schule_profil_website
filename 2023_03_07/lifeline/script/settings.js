@@ -39,7 +39,7 @@ async function retrieveGender() {
 
 async function setGenderSelect() {
 	const gender = await retrieveGender();
-	if (gender === undefined) {
+	if (gender === undefined || gender === "female") {
 		genderSelect.value = "female";
 	} else {
 		genderSelect.value = gender;
@@ -71,7 +71,7 @@ async function retrieveTts() {
 
 async function setTtsToggle() {
 	const tts = await retrieveTts;
-	if (tts === undefined) {
+	if (tts === undefined || tts === true) {
 		tts.value = true;
 	} else {
 		tts.value = tts;
@@ -88,13 +88,19 @@ async function openDatabase() {
 }
 
 async function setFavicon() {
-	let gender = await retrieveGender();
-	const faviconElement = document.querySelector("link[rel='icon']");
-
-	if (gender === undefined || gender === "female") {
+	const gender = await retrieveGender();
+	let faviconElement = document.querySelector("link[rel='icon']");
+	if (!faviconElement) {
+		faviconElement = document.createElement("link");
+		faviconElement.rel = "icon";
+		document.head.appendChild(faviconElement);
+	}
+	if (faviconElement == null || gender === undefined || gender === "female") {
 		faviconElement.href = "../images/favicons/female.png";
+		faviconElement.type = "image/x-icon";
 	} else {
-		faviconElement.href = "../images/favicons/male.png";
+			faviconElement.href = "../images/favicons/male.png";
+			faviconElement.type = "image/x-icon";
 	}
 }
 
