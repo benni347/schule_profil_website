@@ -14,6 +14,7 @@ request.onupgradeneeded = function (event) {
 	db.createObjectStore(ttsStoreName);
 };
 
+// Set the gender value in the indexedDB database
 async function setGender() {
 	const gender = genderSelect.value;
 	const db = await openDatabase();
@@ -21,6 +22,7 @@ async function setGender() {
 	transaction.objectStore(genderStoreName).put(gender, "gender");
 }
 
+// Retrieve the gender value from the indexedDB database
 async function retrieveGender() {
 	let genderValue = undefined;
 	const db = await openDatabase();
@@ -37,6 +39,7 @@ async function retrieveGender() {
 	});
 }
 
+// Set the gender select element value based on the gender value in the indexedDB database
 async function setGenderSelect() {
 	const gender = await retrieveGender();
 	if (gender === undefined || gender === "female") {
@@ -45,14 +48,14 @@ async function setGenderSelect() {
 		genderSelect.value = gender;
 	}
 }
-
+// Set the tts_enabled value in the indexedDB database
 async function setTts() {
 	const tts = ttsTogle.checked;
 	const db = await openDatabase();
 	const transaction = db.transaction(ttsStoreName, "readwrite");
 	transaction.objectStore(ttsStoreName).put(tts, "tts_enabled");
 }
-
+// Retrieve the tts_enabled value from the indexedDB database
 async function retrieveTts() {
 	let ttsValue = undefined;
 	const db = await openDatabase();
@@ -68,7 +71,7 @@ async function retrieveTts() {
 		};
 	});
 }
-
+// Set the tts toggle element value based on the tts_enabled value in the indexedDB database
 async function setTtsToggle() {
 	const tts = await retrieveTts;
 	if (tts === undefined || tts === true) {
@@ -77,7 +80,7 @@ async function setTtsToggle() {
 		tts.value = tts;
 	}
 }
-
+// Open the indexedDB database
 async function openDatabase() {
 	const db = await new Promise((resolve, reject) => {
 		const request = indexedDB.open(dbName, dbVersion);
@@ -86,7 +89,7 @@ async function openDatabase() {
 	});
 	return db;
 }
-
+// Set the favicon based on the gender value in the indexedDB database
 async function setFavicon() {
 	const gender = await retrieveGender();
 	let faviconElement = document.querySelector("link[rel='icon']");
