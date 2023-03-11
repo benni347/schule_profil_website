@@ -1,1 +1,0 @@
-/home/cdrc/git/schule_profil_website/2023_03_07/lifeline/script/rust/sidebar/target/wasm32-unknown-unknown/release/sidebar.wasm: /home/cdrc/git/schule_profil_website/2023_03_07/lifeline/script/rust/sidebar/src/lib.rs
