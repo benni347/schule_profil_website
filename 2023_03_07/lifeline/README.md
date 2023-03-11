@@ -36,3 +36,7 @@
         - Joanna
 - Physic Constraints
   - Don't allow the user to break the modern understanding of physics by transmitting information faster than the speed of light.
+
+- History Tree
+  - Add an overview panel, wherein the player can interact and review the previously selected options.
+  - It should also serve as a means to reset the player's selections to their prior state.
