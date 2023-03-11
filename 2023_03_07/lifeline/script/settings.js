@@ -59,7 +59,7 @@ async function retrieveTts() {
 
 async function setTtsToggle() {
 	const tts = await retrieveTts;
-	if (tts == undefined) {
+	if (tts === undefined) {
 		tts.value = true;
 	} else {
 		const db = await openDatabase();
