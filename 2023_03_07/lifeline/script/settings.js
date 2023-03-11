@@ -109,20 +109,25 @@ async function setFavicon() {
 
 async function setBackground() {
     const gender = await retrieveGender()
-    const mainElement = document.getElementByTagName("main")[0]
+    const mainElement = document.getElementsByTagName("main")[0]
     if (mainElement == null || gender === undefined || gender === "female") {
         mainElement.style.backgroundImage =
-            "url(../images/backgrounds/female.png)"
+            "url('../images/backgrounds/female.png')"
+    } else {
+        mainElement.style.backgroundImage =
+            "url('../images/backgrounds/male.png')"
     }
 }
 
 // Gender Specific
 setGenderSelect()
 setFavicon()
+setBackground()
 
 genderSelect.addEventListener("change", async () => {
     await setGender()
     await setFavicon()
+    await setBackground()
 })
 
 // Tts specific
