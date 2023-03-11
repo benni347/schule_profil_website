@@ -22,10 +22,19 @@ async function setGender() {
 }
 
 async function retrieveGender() {
+	let genderValue = undefined;
 	const db = await openDatabase();
 	const transaction = db.transaction(genderStoreName, "readonly");
-	const gender = await transaction.objectStore(genderStoreName).get("gender");
-	return gender;
+	const getRequest = transaction.objectStore(genderStoreName).get("gender");
+	return new Promise((resolve, reject) => {
+		getRequest.onsuccess = function (event) {
+			const genderValue = event.target.result;
+			resolve(genderValue);
+		};
+		getRequest.onerror = function (event) {
+			reject(event.target.error);
+		};
+	});
 }
 
 async function setGenderSelect() {
@@ -33,13 +42,7 @@ async function setGenderSelect() {
 	if (gender === undefined) {
 		genderSelect.value = "male";
 	} else {
-		const db = await openDatabase();
-		const transaction = db.transaction(genderStoreName, "readonly");
-		const getRequest = transaction.objectStore(genderStoreName).get("gender");
-		getRequest.onsuccess = function (event) {
-			const genderValue = event.target.result;
-			genderSelect.value = genderValue;
-		};
+		genderSelect.value = gender;
 	}
 }
 
@@ -51,10 +54,19 @@ async function setTts() {
 }
 
 async function retrieveTts() {
+	let ttsValue = undefined;
 	const db = await openDatabase();
 	const transaction = db.transaction(ttsStoreName, "readonly");
-	const tts = await transaction.objectStore(ttsStoreName).get("tts_enabled");
-	return tts;
+	const getRequest = transaction.objectStore(ttsStoreName).get("tts_enabled");
+	return new Promise((resolve, reject) => {
+		getRequest.onsuccess = function (event) {
+			const ttsValue = event.target.result;
+			resolve(ttsValue);
+		};
+		getRequest.onerror = function (event) {
+			reject(event.target.error);
+		};
+	});
 }
 
 async function setTtsToggle() {
@@ -62,13 +74,7 @@ async function setTtsToggle() {
 	if (tts === undefined) {
 		tts.value = true;
 	} else {
-		const db = await openDatabase();
-		const transaction = db.transaction(ttsStoreName, "readonly");
-		const getRequest = transaction.objectStore(ttsStoreName).get("tts_enabled");
-		getRequest.onsuccess = function (event) {
-			const ttsValue = event.target.result;
-			tts.value = ttsValue;
-		};
+		tts.value = tts;
 	}
 }
 
