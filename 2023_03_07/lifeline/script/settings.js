@@ -87,12 +87,28 @@ async function openDatabase() {
 	return db;
 }
 
+async function setFavicon() {
+	let gender = await retrieveGender();
+	const faviconElement = document.querySelector("link[rel='icon']");
+
+	if (gender === undefined || gender === "female") {
+		faviconElement.href = "../images/favicons/female.png";
+	} else {
+		faviconElement.href = "../images/favicons/male.png";
+	}
+}
+
+// Gender Specific
 setGenderSelect();
-setTtsToggle();
+setFavicon();
 
 genderSelect.addEventListener("change", async () => {
 	await setGender();
+	await setFavicon();
 });
+
+// Tts specific
+setTtsToggle();
 
 ttsTogle.addEventListener("change", async () => {
 	await setTts();
