@@ -40,7 +40,7 @@ async function retrieveGender() {
 async function setGenderSelect() {
 	const gender = await retrieveGender();
 	if (gender === undefined) {
-		genderSelect.value = "male";
+		genderSelect.value = "female";
 	} else {
 		genderSelect.value = gender;
 	}
