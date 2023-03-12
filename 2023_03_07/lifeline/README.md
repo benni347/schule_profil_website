@@ -1,21 +1,23 @@
 # Notes
 
 <!-- TOC start -->
+
 - [Notes](#notes)
   - [Implemented Features](#implemented-features)
   - [Planned Features](#planned-features)
-<!-- TOC end -->
+    <!-- TOC end -->
 
 ## Implemented Features
 
 ---
 
+- Settings:
+  - A settings menu where the user can turn on/off features.
+
 ## Planned Features
 
 ---
 
-- Settings:
-  - A settings menu where the user can turn on/off features.
 - NLP:
   - An NLP model which allows me to fit the output to the user.
 - Code Input/Validation:
@@ -35,6 +37,7 @@
       - Female
         - Joanna
 - Physic Constraints
+
   - Don't allow the user to break the modern understanding of physics by transmitting information faster than the speed of light.
 
 - History Tree
