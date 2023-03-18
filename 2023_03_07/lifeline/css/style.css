@@ -13,6 +13,7 @@ body {
 }
 
 .title {
+    grid-column: 2 / 3;
     width: fit-content;
     text-align: center;
     margin: 0;
@@ -32,18 +33,6 @@ body {
 
 .menu:hover {
     background-color: rgba(255, 255, 255, 0.3);
-}
-
-.back {
-    grid-column: 1 / 2;
-    justify-self: right;
-    align-self: center;
-    margin-right: 10rem;
-}
-
-.settings {
-    grid-column: 3 / 4;
-    margin-left: 10rem;
 }
 
 .header_child {
