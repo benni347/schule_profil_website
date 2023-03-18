@@ -11,18 +11,64 @@
             href="css/style.css"
             rel="stylesheet"
         />
+        <script
+            src="https://kit.fontawesome.com/67727cb6f5.js"
+            crossorigin="anonymous"
+        ></script>
     </head>
 
     <body>
-        <div class="grid_container settings_hidden">
+        <div class="grid_container settings_hidden container">
             <header class="header header_grid_container">
+                <div class="circle-container">
+                    <div class="circle">
+                        <button id="close">
+                            <svg
+                                xmlns="http://www.w3.org/2000/svg"
+                                viewBox="0 0 512 512"
+                            >
+                                <!--! Font Awesome Pro 6.3.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. -->
+                                <path
+                                    d="M310.6 150.6c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0L160 210.7 54.6 105.4c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3L114.7 256 9.4 361.4c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0L160 301.3 265.4 406.6c12.5 12.5 32.8 12.5 45.3 0s12.5-32.8 0-45.3L205.3 256 310.6 150.6z"
+                                />
+                            </svg>
+                        </button>
+                        <button id="open">
+                            <svg
+                                xmlns="http://www.w3.org/2000/svg"
+                                viewBox="0 0 512 512"
+                            >
+                                <!--! Font Awesome Pro 6.3.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. -->
+                                <path
+                                    d="M0 96C0 78.3 14.3 64 32 64H416c17.7 0 32 14.3 32 32s-14.3 32-32 32H32C14.3 128 0 113.7 0 96zM0 256c0-17.7 14.3-32 32-32H416c17.7 0 32 14.3 32 32s-14.3 32-32 32H32c-17.7 0-32-14.3-32-32zM448 416c0 17.7-14.3 32-32 32H32c-17.7 0-32-14.3-32-32s14.3-32 32-32H416c17.7 0 32 14.3 32 32z"
+                                />
+                            </svg>
+                        </button>
+                    </div>
+                </div>
                 <h1 class="title header_child">LIFELINE Game</h1>
             </header>
-            <main></main>
-            <footer>
-                <div class="copy"></div>
-            </footer>
+            <div class="content">
+                <main class=""></main>
+                <footer class="">
+                    <div class="copy"></div>
+                </footer>
+            </div>
         </div>
+        <nav>
+            <ul>
+                <li><i class="fa-solid fa-gear"></i>Settings</li>
+                <li><i class="fas fa-envelope"></i>Contact</li>
+
+                <li>
+                    <a
+                        href="https://github.com/benni347/schule_profil_website/tree/main/2023_03_07/lifeline"
+                        ><i class="fa-solid fa-code"></i>Source Code</a
+                    >
+                </li>
+            </ul>
+        </nav>
+
         <!--
   <div class="sidebar sidebar_visible">
     <div class="sidebar_title_wraper">
@@ -61,7 +107,6 @@
         -->
         <!--TODO: fix that the wasm code isnt run the greet function like the sidebar function-->
         <script src="script/sidebar.js"></script>
-        <script src="script/settings.js"></script>
         <script src="script/copyright.js"></script>
     </body>
 </html>
