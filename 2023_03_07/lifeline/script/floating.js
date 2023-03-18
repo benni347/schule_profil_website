@@ -1,11 +1,11 @@
 const floatingWindow = document.querySelector(".floating-window");
-const floatingSettings = document.querySelector(".floating-settings");
+const floatingSettingsElement = document.querySelector(".floating-settings");
 
 // Add event listener to open button
 document.getElementById("open-settings").addEventListener("click", function () {
   // Show the floating window
-  floatingSettings.style.display = "block";
-  floatingSettings.style.top = 0;
+  floatingSettingsElement.style.display = "block";
+  floatingSettingsElement.style.top = 0;
 });
 
 // Add event listener to close button

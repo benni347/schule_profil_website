@@ -275,8 +275,8 @@ nav ul li + li + li {
 .floating-window {
     position: absolute;
     width: 25vw;
-
-    height: 40vh;
+    height: fit-content;
+    padding-bottom: 1vh;
     border: 10px solid rgba(150, 150, 150, 0.6);
     box-shadow: 2px 2px 4px rgba(200, 200, 200, 0.2);
     z-index: 9999;
@@ -329,4 +329,10 @@ nav ul li + li + li {
 
 main * {
     margin-top: 0;
+}
+
+#open-settings,
+#open-decissions {
+    cursor: pointer;
+    text-decoration: wavy underline;
 }
