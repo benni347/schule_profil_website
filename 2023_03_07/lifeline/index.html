@@ -55,9 +55,15 @@
                 </footer>
             </div>
         </div>
+        <!-- Floating window container (initially hidden) -->
+
         <nav>
             <ul>
-                <li><i class="fa-solid fa-gear"></i>Settings</li>
+                <li>
+                    <div id="open-settings">
+                        <i class="fa-solid fa-gear"></i>Settings
+                    </div>
+                </li>
                 <li><i class="fas fa-envelope"></i>Contact</li>
 
                 <li>
@@ -68,7 +74,25 @@
                 </li>
             </ul>
         </nav>
+        <div
+            class="floating-window floating-settings"
+            style="display: none"
+        >
+            <div class="drag-handle">
+                <h2 class="window-title">
+                    Settings
+                    <i
+                        id="close-settings"
+                        class="close-window fa-regular fa-circle-xmark"
+                    ></i>
+                </h2>
+            </div>
+            <!-- add a handle element for dragging -->
 
+            <p>This is some content inside the floating window.</p>
+        </div>
+
+        <!--TODO: Add the settings back, it should be in a floating window on top of the page-->
         <!--
   <div class="sidebar sidebar_visible">
     <div class="sidebar_title_wraper">
@@ -107,6 +131,7 @@
         -->
         <!--TODO: fix that the wasm code isnt run the greet function like the sidebar function-->
         <script src="script/sidebar.js"></script>
+        <script src="script/floating.js"></script>
         <script src="script/copyright.js"></script>
     </body>
 </html>
