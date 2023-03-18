@@ -1,137 +1,100 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <title>LIFELINE</title>
-        <meta charset="UTF-8" />
-        <meta
-            name="viewport"
-            content="width=device-width, initial-scale=1"
-        />
-        <link
-            href="css/style.css"
-            rel="stylesheet"
-        />
-        <script
-            src="https://kit.fontawesome.com/67727cb6f5.js"
-            crossorigin="anonymous"
-        ></script>
-    </head>
 
-    <body>
-        <div class="grid_container settings_hidden container">
-            <header class="header header_grid_container">
-                <div class="circle-container">
-                    <div class="circle">
-                        <button id="close">
-                            <svg
-                                xmlns="http://www.w3.org/2000/svg"
-                                viewBox="0 0 512 512"
-                            >
-                                <!--! Font Awesome Pro 6.3.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. -->
-                                <path
-                                    d="M310.6 150.6c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0L160 210.7 54.6 105.4c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3L114.7 256 9.4 361.4c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0L160 301.3 265.4 406.6c12.5 12.5 32.8 12.5 45.3 0s12.5-32.8 0-45.3L205.3 256 310.6 150.6z"
-                                />
-                            </svg>
-                        </button>
-                        <button id="open">
-                            <svg
-                                xmlns="http://www.w3.org/2000/svg"
-                                viewBox="0 0 512 512"
-                            >
-                                <!--! Font Awesome Pro 6.3.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. -->
-                                <path
-                                    d="M0 96C0 78.3 14.3 64 32 64H416c17.7 0 32 14.3 32 32s-14.3 32-32 32H32C14.3 128 0 113.7 0 96zM0 256c0-17.7 14.3-32 32-32H416c17.7 0 32 14.3 32 32s-14.3 32-32 32H32c-17.7 0-32-14.3-32-32zM448 416c0 17.7-14.3 32-32 32H32c-17.7 0-32-14.3-32-32s14.3-32 32-32H416c17.7 0 32 14.3 32 32z"
-                                />
-                            </svg>
-                        </button>
-                    </div>
-                </div>
-                <h1 class="title header_child">LIFELINE Game</h1>
-            </header>
-            <div class="content">
-                <main class=""></main>
-                <footer class="">
-                    <div class="copy"></div>
-                </footer>
-            </div>
+<head>
+  <title>LIFELINE</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link href="css/style.css" rel="stylesheet" />
+  <script src="https://kit.fontawesome.com/67727cb6f5.js" crossorigin="anonymous"></script>
+</head>
+
+<body>
+  <div class="grid_container settings_hidden container">
+    <header class="header header_grid_container">
+      <div class="circle-container">
+        <div class="circle">
+          <button id="close">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+              <!--! Font Awesome Pro 6.3.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. -->
+              <path
+                d="M310.6 150.6c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0L160 210.7 54.6 105.4c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3L114.7 256 9.4 361.4c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0L160 301.3 265.4 406.6c12.5 12.5 32.8 12.5 45.3 0s12.5-32.8 0-45.3L205.3 256 310.6 150.6z" />
+            </svg>
+          </button>
+          <button id="open">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+              <!--! Font Awesome Pro 6.3.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. -->
+              <path
+                d="M0 96C0 78.3 14.3 64 32 64H416c17.7 0 32 14.3 32 32s-14.3 32-32 32H32C14.3 128 0 113.7 0 96zM0 256c0-17.7 14.3-32 32-32H416c17.7 0 32 14.3 32 32s-14.3 32-32 32H32c-17.7 0-32-14.3-32-32zM448 416c0 17.7-14.3 32-32 32H32c-17.7 0-32-14.3-32-32s14.3-32 32-32H416c17.7 0 32 14.3 32 32z" />
+            </svg>
+          </button>
         </div>
-        <!-- Floating window container (initially hidden) -->
-
-        <nav>
-            <ul>
-                <li>
-                    <div id="open-settings">
-                        <i class="fa-solid fa-gear"></i>Settings
-                    </div>
-                </li>
-                <li><i class="fas fa-envelope"></i>Contact</li>
-
-                <li>
-                    <a
-                        href="https://github.com/benni347/schule_profil_website/tree/main/2023_03_07/lifeline"
-                        ><i class="fa-solid fa-code"></i>Source Code</a
-                    >
-                </li>
-            </ul>
-        </nav>
-        <div
-            class="floating-window floating-settings"
-            style="display: none"
-        >
-            <div class="drag-handle">
-                <h2 class="window-title">
-                    Settings
-                    <i
-                        id="close-settings"
-                        class="close-window fa-regular fa-circle-xmark"
-                    ></i>
-                </h2>
-            </div>
-            <!-- add a handle element for dragging -->
-
-            <p>This is some content inside the floating window.</p>
-        </div>
-
-        <!--TODO: Add the settings back, it should be in a floating window on top of the page-->
-        <!--
-  <div class="sidebar sidebar_visible">
-    <div class="sidebar_title_wraper">
-      <h2 id="sidebar_title">Sidebar</h2>
-      <svg xmlns="http://www.w3.org/2000/svg" class="menu close_button" viewBox="0 0 512 512">    -->
-
-        <!--! Font Awesome Pro 6.3.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. -->
-        <!--
-
-        <path
-          d="M256 512c141.4 0 256-114.6 256-256S397.4 0 256 0S0 114.6 0 256S114.6 512 256 512zM175 175c9.4-9.4 24.6-9.4 33.9 0l47 47 47-47c9.4-9.4 24.6-9.4 33.9 0s9.4 24.6 0 33.9l-47 47 47 47c9.4 9.4 9.4 24.6 0 33.9s-24.6 9.4-33.9 0l-47-47-47 47c-9.4 9.4-24.6 9.4-33.9 0s-9.4-24.6 0-33.9l47-47-47-47c-9.4-9.4-9.4-24.6 0-33.9z" />
-      </svg>
+      </div>
+      <h1 class="title header_child">LIFELINE Game</h1>
+    </header>
+    <div class="content">
+      <!--FIXME: the main section is not straight below the header there is a small gap-->
+      <main>
+        <p>hello</p>
+      </main>
+      <footer class="">
+        <div class="copy"></div>
+      </footer>
     </div>
-    -->
-        <!--
-            <div class="sidebar_content">
-                <div class="gender">
-                    <p id="gender_text">Gender:</p>
-                    <select id="gender">
-                        <option value="male">Male Protagonist</option>
-                        <option value="female">Female Protagonist</option>
-                    </select>
-                </div>
-                <div class="tts">
-                    <p id="tts_enabled">TTS:</p>
-                    <label class="switch">
-                        <input
-                            type="checkbox"
-                            id="tts"
-                        />
-                        <span class="slider round"></span>
-                    </label>
-                </div>
-            </div>
+  </div>
+  <!-- Floating window container (initially hidden) -->
+
+  <nav>
+    <ul>
+      <li>
+        <div id="open-settings">
+          <i class="fa-solid fa-gear"></i>Settings
         </div>
-        -->
-        <!--TODO: fix that the wasm code isnt run the greet function like the sidebar function-->
-        <script src="script/sidebar.js"></script>
-        <script src="script/floating.js"></script>
-        <script src="script/copyright.js"></script>
-    </body>
+      </li>
+      <li>
+        <div id="open-decissions">
+
+          <i class="fa-solid fa-diagram-project"></i>Decissions
+      </li>
+
+      <li>
+        <a href="https://github.com/benni347/schule_profil_website/tree/main/2023_03_07/lifeline"><i
+            class="fa-solid fa-code"></i>Source Code</a>
+      </li>
+    </ul>
+  </nav>
+  <div class="floating-window floating-settings" style="display: none">
+    <div class="drag-handle">
+      <h2 class="window-title">
+        Settings
+        <i id="close-settings" class="close-window fa-regular fa-circle-xmark"></i>
+      </h2>
+    </div>
+    <!-- add a handle element for dragging -->
+    <details open>
+      <summary>General</summary>
+      <div class="gender">
+        <p id="gender_text">Gender:</p>
+        <select id="gender">
+          <option value="male">Male Protagonist</option>
+          <option value="female">Female Protagonist</option>
+        </select>
+      </div>
+      <div class="tts">
+        <p id="tts_enabled">TTS:</p>
+        <label class="switch">
+          <input type="checkbox" id="tts" />
+          <span class="slider round"></span>
+        </label>
+      </div>
+    </details>
+  </div>
+
+  <!--TODO: fix that the wasm code isnt run the greet function like the sidebar function-->
+  <script src="script/settings.js"></script>
+  <script src="script/sidebar.js"></script>
+  <script src="script/floating.js"></script>
+  <script src="script/copyright.js"></script>
+</body>
+
 </html>

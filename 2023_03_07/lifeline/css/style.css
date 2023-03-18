@@ -58,6 +58,8 @@ main {
     background-repeat: no-repeat;
     background-size: contain;
     background-position: center;
+    height: 100%;
+    margin-top: 0;
 }
 
 .header_grid_container {
@@ -303,4 +305,28 @@ nav ul li + li + li {
     margin-top: 0;
     padding-top: 0;
     margin-bottom: 0;
+}
+
+.gender {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+
+#gender {
+    margin-right: 0.5vw;
+    margin-left: 0.5vw;
+}
+
+.tts {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+
+.switch {
+    align-self: center;
+    justify-self: center;
+}
+
+main * {
+    margin-top: 0;
 }
