@@ -4,6 +4,8 @@ import os
 
 import boto3
 from dotenv import load_dotenv
+from ibm_cloud_sdk_core.authenticators import IAMAuthenticator
+from ibm_watson import TextToSpeechV1
 
 # Load the environment variables from the .env file
 load_dotenv()
@@ -12,6 +14,7 @@ OUTPUTFORMAT = "mp3"
 # Retrieve the AWS access credentials from environment variables
 AWS_ACCESS_KEY_ID = os.getenv("AWS_ACCESS_KEY_ID")
 AWS_SECRET_ACCESS_KEY = os.getenv("AWS_SECRET_ACCESS_KEY")
+IBM_API_KEY = os.getenv("IBM_ACCESS_KEY")
 # Set the AWS region
 REGION_NAME = "us-west-2"
 TEXTTYPE = "text"
@@ -193,7 +196,25 @@ def meVoice(text: str):
             break
 
 
+def countdownVoice():
+    authenticator = IAMAuthenticator(IBM_API_KEY)
+    text_to_speech = TextToSpeechV1(authenticator=authenticator)
+    url = "https://api.eu-de.text-to-speech.watson.cloud.ibm.com/instances/8f1e287d-3fc3-4f69-90a2-9e701e0df16a"
+    voice = "en-US_MichaelV3Voice"
+    text_to_speech.set_service_url(url)
+
+    for i in range(1, 11):
+        print(i)
+        with open(f"{i}.wav", "wb") as audio_file:
+            audio_file.write(
+                text_to_speech.synthesize(str(i), voice=voice, accept="audio/wav")
+                .get_result()
+                .content
+            )
+
+
 if __name__ == "__main__":
+    """
     parser = argparse.ArgumentParser()
     parser.add_argument(
         "--moderator", type=str, help="The text for the moderator to speak"
@@ -225,3 +246,5 @@ if __name__ == "__main__":
     if args.me:
         text = args.me.strip("\"'")
         meVoice(text)
+    """
+    countdownVoice()
