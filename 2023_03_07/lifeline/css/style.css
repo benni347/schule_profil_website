@@ -333,17 +333,17 @@ main * {
 
 main {
     display: grid;
-    grid-template-rows: repeat(2, 1fr) 2fr;
+    grid-template-rows: 3fr 1fr;
     gap: 1vh;
 }
 
 .main-story-text {
-    grid-row: 2/-2;
+    grid-row: 1/-2;
     align-self: end;
 }
 
 .main-story-decission-container {
-    grid-row: 3/-1;
+    grid-row: 3/-2;
     display: grid;
     grid-template-columns: 0.5fr repeat(2, 1fr) 0.5fr;
     justify-items: center;
@@ -373,13 +373,26 @@ main {
     padding-left: 5vw;
     padding-right: 5vw;
     text-shadow: 5px 0 5px black;
+    font-family: monospace;
+    white-space: pre-line;
 }
 
-@keyframes typing {
-    from {
-        width: 0;
+.typing-animation .cursor {
+    display: inline-block;
+    width: 10px;
+    height: 24px;
+    background-color: #fff;
+    animation: blink 2s infinite;
+}
+
+@keyframes blink {
+    0% {
+        visibility: visible;
     }
-    to {
-        width: 100%;
+    50% {
+        visibility: hidden;
+    }
+    100% {
+        visibility: visible;
     }
 }
