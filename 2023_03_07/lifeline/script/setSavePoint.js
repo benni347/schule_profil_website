@@ -94,7 +94,7 @@ async function retrieveFirstTimeVisit() {
   const transaction = db.transaction(savePointStoreName, "readonly");
   const getRequest = transaction
     .objectStore(savePointStoreName)
-    .get("current");
+    .get("firstTimeVisit");
   return new Promise((resolve, reject) => {
     getRequest.onsuccess = function (event) {
       const savePointValue = event.target.result;
