@@ -367,3 +367,19 @@ main {
     cursor: pointer;
     text-decoration: wavy underline;
 }
+
+.typing-animation {
+    font-size: 24px;
+    padding-left: 5vw;
+    padding-right: 5vw;
+    text-shadow: 5px 0 5px black;
+}
+
+@keyframes typing {
+    from {
+        width: 0;
+    }
+    to {
+        width: 100%;
+    }
+}
