@@ -80,44 +80,38 @@ async function setTtsToggle() {
 
 async function setTtsVolumeVisability() {
     const tts = await retrieveTts()
-    const newDetails = document.createElement("details")
-    /*
-     * FIXME: The newDetails element doesn't get removed when the tts state changes, but it gets loged
-     */
+    const existingDetails = document.querySelector("#tts-details")
     if (tts == undefined || tts === true) {
-        // Create a new details element
-        // Create a new p element and add text content to it
-        const paragraph = document.createElement("p")
-        // Create a new summary element and add text content to it
-        const summary = document.createElement("summary")
-        const div = document.createElement("div")
-        const rangeInput = document.createElement("input")
+        // Create a new details element if it doesn't exist
+        if (!existingDetails) {
+            const newDetails = document.createElement("details")
+            const paragraph = document.createElement("p")
+            const summary = document.createElement("summary")
+            const div = document.createElement("div")
+            const rangeInput = document.createElement("input")
 
-        summary.textContent = "TTS"
-        paragraph.textContent = "Volume"
-        paragraph.setAttribute("id", "tts-volume-text")
-        div.classList.add("tts-misc")
-        newDetails.appendChild(summary)
-        div.appendChild(paragraph)
-        rangeInput.setAttribute("type", "range")
-        rangeInput.setAttribute("name", "volume")
-        rangeInput.setAttribute("min", "0")
-        rangeInput.setAttribute("max", "100")
-        rangeInput.setAttribute("step", "1")
-        rangeInput.setAttribute("value", "255")
-        div.appendChild(rangeInput)
-        newDetails.appendChild(div)
-        floatingSettings.appendChild(newDetails)
-        /*
- <details>
-      <summary>TTS</summary>
-      <div class="tts-misc">
-        <p id="tts-volume-text">Volume</p>
-        <input type="range" name="volume" value="100" min="0" max="100" step="1">
-    </details>
-          */
+            summary.textContent = "TTS"
+            paragraph.textContent = "Volume"
+            paragraph.setAttribute("id", "tts-volume-text")
+            div.classList.add("tts-misc")
+            rangeInput.setAttribute("type", "range")
+            rangeInput.setAttribute("name", "volume")
+            rangeInput.setAttribute("min", "0")
+            rangeInput.setAttribute("max", "100")
+            rangeInput.setAttribute("step", "1")
+            rangeInput.setAttribute("value", "255")
+            div.appendChild(paragraph)
+            div.appendChild(rangeInput)
+            newDetails.appendChild(summary)
+            newDetails.appendChild(div)
+            newDetails.setAttribute("id", "tts-details")
+            floatingSettings.appendChild(newDetails)
+        }
     } else if (tts === false) {
-        newDetails.remove()
+        // Remove the details element if it exists
+        if (existingDetails) {
+            existingDetails.remove()
+        }
     } else {
         console.error(tts)
     }
