@@ -1,3 +1,5 @@
+#!/usr/bin/env python
+import argparse
 import os
 
 import boto3
@@ -50,7 +52,6 @@ def moderatorVoice(text: str):
     task_id = response["SynthesisTask"]["TaskId"]
     while True:
         task = POLLY_CLIENT.get_speech_synthesis_task(TaskId=task_id)
-        print(task)
         task_status = task["SynthesisTask"]["TaskStatus"]
         if task_status == "completed":
             print("Done")
@@ -124,6 +125,103 @@ def femaleVoice(text: str):
             break
 
 
+def missionControlVoice(text: str):
+    """
+    Uses Amazon Polly to synthesize speech for the given input text using the Ruth voice in English-US language.
+    The synthesized audio file is saved in an S3 bucket named "lifeline-game-profil-mission-control".
+
+    Args:
+        text (str): The input text to synthesize speech.
+
+    Returns:
+        None
+    """
+    # Set the voice and output format
+    voice_id = "Ruth"
+    engine = "neural"
+    outputs3bucketname = "lifeline-game-profil-mission-control"
+    response = POLLY_CLIENT.start_speech_synthesis_task(
+        Engine=engine,
+        LanguageCode=LANGUAGECODE,
+        OutputFormat=OUTPUTFORMAT,
+        SampleRate=SAMPLERATE,
+        TextType=TEXTTYPE,
+        VoiceId=voice_id,
+        Text=text,
+        OutputS3BucketName=outputs3bucketname,
+    )
+    task_id = response["SynthesisTask"]["TaskId"]
+    while True:
+        task = POLLY_CLIENT.get_speech_synthesis_task(TaskId=task_id)
+        task_status = task["SynthesisTask"]["TaskStatus"]
+        if task_status == "completed":
+            print("Done")
+            break
+
+
+def meVoice(text: str):
+    """
+    Uses Amazon Polly to synthesize speech for the given input text using the Joey voice in English-US language.
+    The synthesized audio file is saved in an S3 bucket named "lifeline-game-profil-me".
+
+    Args:
+        text (str): The input text to synthesize speech.
+
+    Returns:
+        None
+    """
+    # Set the voice and output format
+    voice_id = "Joey"
+    engine = "neural"
+    outputs3bucketname = "lifeline-game-profil-me"
+    response = POLLY_CLIENT.start_speech_synthesis_task(
+        Engine=engine,
+        LanguageCode=LANGUAGECODE,
+        OutputFormat=OUTPUTFORMAT,
+        SampleRate=SAMPLERATE,
+        TextType=TEXTTYPE,
+        VoiceId=voice_id,
+        Text=text,
+        OutputS3BucketName=outputs3bucketname,
+    )
+    task_id = response["SynthesisTask"]["TaskId"]
+    while True:
+        task = POLLY_CLIENT.get_speech_synthesis_task(TaskId=task_id)
+        task_status = task["SynthesisTask"]["TaskStatus"]
+        if task_status == "completed":
+            print("Done")
+            break
+
+
 if __name__ == "__main__":
-    # Do something
-    return
+    parser = argparse.ArgumentParser()
+    parser.add_argument(
+        "--moderator", type=str, help="The text for the moderator to speak"
+    )
+    parser.add_argument(
+        "--missioncontrol", type=str, help="The text for the missioncontrol to speak"
+    )
+    parser.add_argument("--female", type=str, help="The text for the female to say")
+    parser.add_argument("--male", type=str, help="The text for the male to speak")
+    parser.add_argument("--me", type=str, help="The text for me to speak")
+    args = parser.parse_args()
+
+    if args.moderator:
+        text = args.moderator.strip("\"'")  # remove surrounding quotes if present
+        moderatorVoice(text)
+
+    if args.missioncontrol:
+        text = args.missioncontrol.strip("\"'")
+        missionControlVoice(text)
+
+    if args.female:
+        text = args.female.strip("\"'")
+        femaleVoice(text)
+
+    if args.male:
+        text = args.male.strip("\"'")
+        maleVoice(text)
+
+    if args.me:
+        text = args.me.strip("\"'")
+        meVoice(text)
