@@ -53,8 +53,21 @@ async function setGenderSelect() {
 async function setTts() {
   const tts = ttsTogle.checked;
   const db = await openDatabase();
+
+  const firstTimeVisit = retrieveFirstTimeVisit();
   const transaction = db.transaction(ttsStoreName, "readwrite");
   transaction.objectStore(ttsStoreName).put(tts, "tts_enabled");
+}
+
+async function setStartOptions() {
+  const db = await openSaveDatabase();
+  const firstTimeVisit = await retrieveFirstTimeVisit();
+  if (firstTimeVisit !== false) {
+    const transactionGender = db.transaction(genderStoreName, "readwrite");
+    transactionGender.objectStore(genderStoreName).put("female", "gender");
+    const transactionTts = db.transaction(ttsStoreName, "readwrite");
+    transactionTts.objectStore(ttsStoreName).put(true, "tts_enabled");
+  }
 }
 
 // Retrieve the tts_enabled value from the indexedDB database
@@ -155,6 +168,34 @@ async function setBackground() {
   }
 }
 
+async function openSaveDatabase() {
+  const db = await new Promise((resolve, reject) => {
+    const request = indexedDB.open("save", dbVersion);
+    request.onerror = () => reject(request.error);
+    request.onsuccess = () => resolve(request.result);
+  });
+  return db;
+}
+
+async function retrieveFirstTimeVisit() {
+  const db = await openSaveDatabase();
+  const transaction = db.transaction(savePointStoreName, "readonly");
+  const getRequest = transaction
+    .objectStore(savePointStoreName)
+    .get("firstTimeVisit");
+  return new Promise((resolve, reject) => {
+    getRequest.onsuccess = function (event) {
+      const savePointValue = event.target.result;
+      resolve(savePointValue);
+    };
+    getRequest.onerror = function (event) {
+      reject(event.target.error);
+    };
+  });
+}
+
+setStartOptions();
+
 // Gender Specific
 setGenderSelect();
 setFavicon();
@@ -168,6 +209,7 @@ genderSelect.addEventListener("change", async () => {
 
 // Tts specific
 setTtsToggle();
+setTts();
 setTtsVolumeVisability();
 
 ttsTogle.addEventListener("change", async () => {
