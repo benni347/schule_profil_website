@@ -207,7 +207,8 @@ def countdownVoice():
         print(i)
         with open(f"{i}.wav", "wb") as audio_file:
             audio_file.write(
-                text_to_speech.synthesize(str(i), voice=voice, accept="audio/wav")
+                text_to_speech.synthesize(
+                    str(i), voice=voice, accept="audio/wav")
                 .get_result()
                 .content
             )

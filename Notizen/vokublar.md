@@ -134,8 +134,8 @@
 </ol>
 ```
 
-- `<img src="Ordnername/img.jpg" width="400" height="auto" usemap="#map_1" />`
-  - Ein Bild anzeigen lassen, Grösse definieren, Bild als Map definieren
+-   `<img src="Ordnername/img.jpg" width="400" height="auto" usemap="#map_1" />`
+    -   Ein Bild anzeigen lassen, Grösse definieren, Bild als Map definieren
 
 ```html
 <img
@@ -153,34 +153,42 @@
     />
 </map>
 ```
-- Bild und Map  
-  - Ein Bild anzeigen lassen, Grösse definieren, Bild als Map definieren
-  - Map anlegen, Form Festlegen
-  - Download datei festlegen
-  - Download namen festlegen
+
+-   Bild und Map
+    -   Ein Bild anzeigen lassen, Grösse definieren, Bild als Map definieren
+    -   Map anlegen, Form Festlegen
+    -   Download datei festlegen
+    -   Download namen festlegen
 
 ```html
 <audio>
-    <source src="ordner/music.mp3" type="audio/mp3">
+    <source
+        src="ordner/music.mp3"
+        type="audio/mp3"
+    />
 </audio>
 ```
-- Atribute
-    - autoplay
-    - muted
-    - controls
-    - loop
+
+-   Atribute
+    -   autoplay
+    -   muted
+    -   controls
+    -   loop
 
 ```html
 <video>
-    <source src="ordner/music.mp4" type="video/mp4">
+    <source
+        src="ordner/music.mp4"
+        type="video/mp4"
+    />
 </video>
 ```
-- Atribute
-    - autoplay
-    - muted
-    - controls
-    - loop
 
+-   Atribute
+    -   autoplay
+    -   muted
+    -   controls
+    -   loop
 
 ## CSS
 
@@ -195,146 +203,126 @@
 />
 ```
 
-- Verlinkungen zu CSS Datei im Head.
+-   Verlinkungen zu CSS Datei im Head.
 
 `background-repeat: no-repeat`
 
-- keine Wiederholung
+-   keine Wiederholung
 
 `background-repeat: repeat-x`
 
-- Wiederholung in X-Achse
+-   Wiederholung in X-Achse
 
 `background-position: right top;`
 
-- Oben rechts, (Cover, Center, Left, etc.) Pixel / % möglich.
+-   Oben rechts, (Cover, Center, Left, etc.) Pixel / % möglich.
 
 `background-attachment: fixed;`
 
-- Fixiert, auch bei scrollen (center center für zentriert)
+-   Fixiert, auch bei scrollen (center center für zentriert)
 
 `background-size: 240px 100px;`
 
-- Grösse Hintergrund, oder "auto" oder 100% f. g. Screen
+-   Grösse Hintergrund, oder "auto" oder 100% f. g. Screen
 
 `background-size: cover;`
 
-- Hintergund deckt ganze Fläche ab
+-   Hintergund deckt ganze Fläche ab
 
 `position: absolute;`
 
-- "Absolute" Position angeben
+-   "Absolute" Position angeben
 
 `z-index: 1;`
 
-- Tiefe in Z-Richtung
+-   Tiefe in Z-Richtung
 
 `border: 2 px solid black;`
 
-- Linie an Rand 2px breit. (border-top/bottom/left/right auch möglich)
+-   Linie an Rand 2px breit. (border-top/bottom/left/right auch möglich)
 
 `top: 200px; / top: 20%;`
 
-- Abstand vom oberen Rand: „In Pixel“ oder in "%".
+-   Abstand vom oberen Rand: „In Pixel“ oder in "%".
 
 `left: 310px;`
 
-- Abstand vom linken Rand: „In Pixel“.
+-   Abstand vom linken Rand: „In Pixel“.
 
 `width: 500px;`
 
-- Breite: In Pixel
+-   Breite: In Pixel
 
 `font-family: Calibri;`
 
-- Schriftarten (Arial, Times New Roman, etc.)
+-   Schriftarten (Arial, Times New Roman, etc.)
 
 `font-size: 10px;`
 
-- Schriftgrösse 10               
+-   Schriftgrösse 10
 
 `text-align: center;`
 
-- Ausrichtung (left, center, right, block)
+-   Ausrichtung (left, center, right, block)
 
 `color: black;`
 
-- Schriftfarbe: (rgb code, black)
+-   Schriftfarbe: (rgb code, black)
 
 `background-color: #665590;`
 
-- Hintergrundfarbe: rgb code, blue)
+-   Hintergrundfarbe: rgb code, blue)
 
 `background: url("design/header.gif");`
 
-- Hintergrund „header“
+-   Hintergrund „header“
 
 ### Font
+
 ```html
-@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;500;700&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Ubuntu:wght@300;500;700&display=swap');
-.text {
-    font-family: Roboto, sans-serif;
-}
-
-h1 {
-  font-size: 30pt;
-  font-weight: 700;
-}
-
-p {
-  font-family: Ubuntu;
-  font-weight: 200;
-}
+@import
+url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;500;700&display=swap');
+@import
+url('https://fonts.googleapis.com/css2?family=Ubuntu:wght@300;500;700&display=swap');
+.text { font-family: Roboto, sans-serif; } h1 { font-size: 30pt; font-weight:
+700; } p { font-family: Ubuntu; font-weight: 200; }
 ```
-- Schrift importieren
-- Font setzten
-- Font Size und weight ändern
+
+-   Schrift importieren
+-   Font setzten
+-   Font Size und weight ändern
 
 #### Link Styling
 
 ```html
-a:link {
-  color: #f0f0f0;
-}
+a:link { color: #f0f0f0; }
 ```
 
-- Unvisited
+-   Unvisited
 
 ```html
-a:hover {
-  color: #0f0f0f;
-  text-decoration: wavy underline;
-}
+a:hover { color: #0f0f0f; text-decoration: wavy underline; }
 ```
 
-- Hover
+-   Hover
 
 ```html
-a:active {
-  color: #fff000;
-  text-decoration: underline;
-}
+a:active { color: #fff000; text-decoration: underline; }
 ```
 
-- Beim Drauf drücken
+-   Beim Drauf drücken
 
 ```html
-a:visited {
-  color: #00f0ff;
-  text-decoration: overline;
-}
+a:visited { color: #00f0ff; text-decoration: overline; }
 ```
 
-- Wenn beretis webseite besucht wurde
+-   Wenn beretis webseite besucht wurde
 
 ```html
-a {
-  text-decoration: none;
-}
+a { text-decoration: none; }
 ```
 
-- Standard
+-   Standard
 
 ## JS
 
