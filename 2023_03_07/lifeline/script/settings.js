@@ -135,7 +135,7 @@ async function setFavicon() {
     faviconElement.rel = "icon";
     document.head.appendChild(faviconElement);
   }
-  if (faviconElement == null || gender === undefined || gender === "female") {
+  if (faviconElement === null || gender === undefined || gender === "female") {
     faviconElement.href = "../images/favicons/female.png";
     faviconElement.type = "image/x-icon";
   } else {
@@ -147,7 +147,7 @@ async function setFavicon() {
 async function setBackground() {
   const gender = await retrieveGender();
   const mainElement = document.getElementsByTagName("main")[0];
-  if (mainElement == null || gender === undefined || gender === "female") {
+  if (mainElement === null || gender === undefined || gender === "female") {
     mainElement.style.backgroundImage =
       "url('../images/backgrounds/female.png')";
   } else {
