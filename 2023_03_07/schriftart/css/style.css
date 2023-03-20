@@ -1,38 +1,38 @@
-@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;500;700&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Ubuntu:wght@300;500;700&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@300;500;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Ubuntu:wght@300;500;700&display=swap");
 .text {
     font-family: Roboto, sans-serif;
 }
 
 h1 {
-  font-size: 30pt;
-  font-weight: 700;
+    font-size: 30pt;
+    font-weight: 700;
 }
 
 p {
-  font-family: Ubuntu;
-  font-weight: 200;
+    font-family: Ubuntu;
+    font-weight: 200;
 }
 
 a:link {
-  color: #f0f0f0;
+    color: #f0f0f0;
 }
 
 a:hover {
-  color: #0f0f0f;
-  text-decoration: wavy underline;
+    color: #0f0f0f;
+    text-decoration: wavy underline;
 }
 
 a:active {
-  color: #fff000;
-  text-decoration: underline;
+    color: #fff000;
+    text-decoration: underline;
 }
 
 a:visited {
-  color: #00f0ff;
-  text-decoration: overline;
+    color: #00f0ff;
+    text-decoration: overline;
 }
 
 a {
-  text-decoration: none;
+    text-decoration: none;
 }
