@@ -7,11 +7,17 @@ function updateLayout() {
     const hamburgerMenu = document.createElement("div");
     hamburgerMenu.classList.add("hamburger-menu");
     const hamburgerElement = document.createElement("i");
-    hamburgerElement.setAttribute("class", "hamburher fa-solid fa-bars");
-
+    hamburgerElement.setAttribute("class", "hamburger fa-solid fa-bars");
     // Set the style attribute
     hamburgerElement.setAttribute("style", "color: #9a9996;");
-
+    const settingsA = document.createElement("a");
+    const decissionsA = document.createElement("a");
+    const sourceCodeA = document.createElement("a");
+    sourceCodeA.setAttribute(
+      "href",
+      "https://github.com/benni347/schule_profil_website/tree/main/2023_03_07/lifeline",
+    );
+    sourceCodeA.textContent = "Source Code";
     hamburgerMenu.appendChild(hamburgerElement);
 
     // Add the hamburger menu to the DOM at the appropriate location.
