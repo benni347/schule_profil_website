@@ -1,3 +1,5 @@
+@import url("https://fonts.googleapis.com/css2?family=Nova+Mono&display=swap");
+
 :root {
     --background-color: rgba(30, 30, 30, 0.9);
     --lighter-background-color: rgba(50, 50, 50, 0.3);
@@ -5,6 +7,7 @@
 
 * {
     box-sizing: border-box;
+    font-family: "Nova Mono", monospace;
 }
 
 body {
@@ -15,10 +18,11 @@ body {
     height: 100%;
     min-height: 100%;
     overflow-x: hidden;
+    user-select: none;
 }
 
-#close,
-#open {
+.close,
+.open {
     width: 2.5vw;
     aspect-ratio: 1 / 1;
     filter: invert();
@@ -213,11 +217,11 @@ h2 {
     outline: none;
 }
 
-.circle button#open {
+.circle button.open {
     left: 60%;
 }
 
-.circle button#close {
+.circle button.close {
     top: 60%;
     transform: rotate(90deg);
     transform-origin: top left;
@@ -373,7 +377,6 @@ main {
     padding-left: 5vw;
     padding-right: 5vw;
     text-shadow: 5px 0 5px black;
-    font-family: monospace;
     white-space: pre-line;
 }
 

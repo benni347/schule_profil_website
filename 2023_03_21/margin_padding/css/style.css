@@ -1,0 +1,29 @@
+body {
+    margin: 0;
+    border: 0;
+    padding: 0;
+    background-color: lightblue;
+}
+
+.content {
+    background-color: yellowgreen;
+    margin: 2vh 2vw;
+    border: 3px solid black;
+    border-radius: 25px;
+    aspect-ratio: 16 / 9;
+    width: 50vw;
+    padding-bottom: 2vh;
+}
+
+.innerContent {
+    margin: 30px;
+    border: 2px solid hotpink;
+    border-radius: 12px;
+    background-color: mediumaquamarine;
+    padding: 50px;
+    height: inherit;
+}
+
+h1 {
+    text-align: center;
+}

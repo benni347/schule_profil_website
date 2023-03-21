@@ -2,44 +2,28 @@
 const genderSelect = document.getElementById('gender')
 const ttsTogle = document.getElementById('tts')
 const floatingSettings = document.querySelector('.floating-settings')
-const dbVersion = 1
-const dbName = 'mydb'
-const genderStoreName = 'gender'
-const ttsStoreName = 'tts'
+const dbVersion = 3
 
-// Create a database and set up object stores
-const request = indexedDB.open(dbName, dbVersion)
-request.onupgradeneeded = function (event) {
-  const db = event.target.result
-  db.createObjectStore(genderStoreName)
-  db.createObjectStore(ttsStoreName)
-}
+// Initialize the Dexie.js database
+const db = new Dexie('settings')
+db.version(dbVersion).stores({
+  page: '++id, firstTimeVisit',
+  gender: '',
+  tts: ''
+})
 
-// Set the gender value in the indexedDB database
+// Set the gender value in the Dexie.js database
 async function setGender () {
   const gender = genderSelect.value
-  const db = await openDatabase()
-  const transaction = db.transaction(genderStoreName, 'readwrite')
-  transaction.objectStore(genderStoreName).put(gender, 'gender')
+  await db.gender.put(gender, 'gender')
 }
 
-// Retrieve the gender value from the indexedDB database
+// Retrieve the gender value from the Dexie.js database
 async function retrieveGender () {
-  const db = await openDatabase()
-  const transaction = db.transaction(genderStoreName, 'readonly')
-  const getRequest = transaction.objectStore(genderStoreName).get('gender')
-  return new Promise((resolve, reject) => {
-    getRequest.onsuccess = function (event) {
-      const genderValue = event.target.result
-      resolve(genderValue)
-    }
-    getRequest.onerror = function (event) {
-      reject(event.target.error)
-    }
-  })
+  return await db.gender.get('gender')
 }
 
-// Set the gender select element value based on the gender value in the indexedDB database
+// Set the gender select element value based on the gender value in the Dexie.js database
 async function setGenderSelect () {
   const gender = await retrieveGender()
   if (gender === undefined || gender === 'female') {
@@ -49,47 +33,45 @@ async function setGenderSelect () {
   }
 }
 
-// Set the tts_enabled value in the indexedDB database
+// Set the tts_enabled value in the Dexie.js database
 async function setTts () {
   const tts = ttsTogle.checked
-  const db = await openDatabase()
-
-  const firstTimeVisit = retrieveFirstTimeVisit()
-  const transaction = db.transaction(ttsStoreName, 'readwrite')
-  transaction.objectStore(ttsStoreName).put(tts, 'tts_enabled')
+  await db.tts.put(tts, 'tts_enabled')
 }
 
+// Set the start options in the Dexie.js database
 async function setStartOptions () {
-  const db = await openSaveDatabase()
   const firstTimeVisit = await retrieveFirstTimeVisit()
   if (firstTimeVisit !== false) {
-    const transactionGender = db.transaction(genderStoreName, 'readwrite')
-    transactionGender.objectStore(genderStoreName).put('female', 'gender')
-    const transactionTts = db.transaction(ttsStoreName, 'readwrite')
-    transactionTts.objectStore(ttsStoreName).put(true, 'tts_enabled')
+    await db.gender.put('female', 'gender')
+    await db.tts.put(true, 'tts_enabled')
+    await db.tts.put(1.0, 'tts_volume')
   }
 }
 
-// Retrieve the tts_enabled value from the indexedDB database
-async function retrieveTts () {
-  const db = await openDatabase()
-  const transaction = db.transaction(ttsStoreName, 'readonly')
-  const getRequest = transaction.objectStore(ttsStoreName).get('tts_enabled')
-  return new Promise((resolve, reject) => {
-    getRequest.onsuccess = function (event) {
-      const ttsValue = event.target.result
-      resolve(ttsValue)
-    }
-    getRequest.onerror = function (event) {
-      reject(event.target.error)
-    }
-  })
+// Function to store whether it is the first time visiting the page
+async function setFirstTimeVisit () {
+  await db.page.add({ firstTimeVisit: false })
 }
-// Set the tts toggle element value based on the tts_enabled value in the indexedDB database
+
+// Function to retrieve whether it is the first time visiting the page
+async function retrieveFirstTimeVisit () {
+  const result = await db.page.get({ id: 1 })
+  return result ? result.firstTimeVisit : true
+}
+
+// Retrieve the tts_enabled value from the Dexie.js database
+async function retrieveTts () {
+  return await db.tts.get('tts_enabled')
+}
+
+// Set the tts toggle element value based on the tts_enabled value in the Dexie.js database
 async function setTtsToggle () {
   const tts = await retrieveTts()
   ttsTogle.checked = tts
 }
+
+// Set the tts volume visibility based on the tts_enabled value in the Dexie.js database
 
 async function setTtsVolumeVisability () {
   const tts = await retrieveTts()
@@ -130,16 +112,6 @@ async function setTtsVolumeVisability () {
   }
 }
 
-// Open the indexedDB database
-async function openDatabase () {
-  const db = await new Promise((resolve, reject) => {
-    const request = indexedDB.open(dbName, dbVersion)
-    request.onerror = () => reject(request.error)
-    request.onsuccess = () => resolve(request.result)
-  })
-  return db
-}
-// Set the favicon based on the gender value in the indexedDB database
 async function setFavicon () {
   const gender = await retrieveGender()
   let faviconElement = document.querySelector("link[rel='icon']")
@@ -169,33 +141,8 @@ async function setBackground () {
   }
 }
 
-async function openSaveDatabase () {
-  const db = await new Promise((resolve, reject) => {
-    const request = indexedDB.open('save', dbVersion)
-    request.onerror = () => reject(request.error)
-    request.onsuccess = () => resolve(request.result)
-  })
-  return db
-}
-
-async function retrieveFirstTimeVisit () {
-  const db = await openSaveDatabase()
-  const transaction = db.transaction(savePointStoreName, 'readonly')
-  const getRequest = transaction
-    .objectStore(savePointStoreName)
-    .get('firstTimeVisit')
-  return new Promise((resolve, reject) => {
-    getRequest.onsuccess = function (event) {
-      const savePointValue = event.target.result
-      resolve(savePointValue)
-    }
-    getRequest.onerror = function (event) {
-      reject(event.target.error)
-    }
-  })
-}
-
 setStartOptions()
+setFirstTimeVisit()
 
 // Gender Specific
 setGenderSelect()
