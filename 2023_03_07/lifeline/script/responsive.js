@@ -1,46 +1,46 @@
-"use strict";
-function updateLayout() {
-  const viewportWidth = window.innerWidth;
+'use strict'
+function updateLayout () {
+  const viewportWidth = window.innerWidth
   if (viewportWidth < 720) {
-    const circleContainer = document.querySelector(".circle-container");
-    const parent = circleContainer.parentNode;
-    const hamburgerMenu = document.createElement("div");
-    hamburgerMenu.classList.add("hamburger-menu");
-    const hamburgerElement = document.createElement("i");
-    hamburgerElement.setAttribute("class", "hamburger fa-solid fa-bars");
+    const circleContainer = document.querySelector('.circle-container')
+    const parent = circleContainer.parentNode
+    const hamburgerMenu = document.createElement('div')
+    hamburgerMenu.classList.add('hamburger-menu')
+    const hamburgerElement = document.createElement('i')
+    hamburgerElement.setAttribute('class', 'hamburger fa-solid fa-bars')
     // Set the style attribute
-    hamburgerElement.setAttribute("style", "color: #9a9996;");
-    const settingsA = document.createElement("a");
-    const decissionsA = document.createElement("a");
-    const sourceCodeA = document.createElement("a");
+    hamburgerElement.setAttribute('style', 'color: #9a9996;')
+    const settingsA = document.createElement('a')
+    const decissionsA = document.createElement('a')
+    const sourceCodeA = document.createElement('a')
     sourceCodeA.setAttribute(
-      "href",
-      "https://github.com/benni347/schule_profil_website/tree/main/2023_03_07/lifeline",
-    );
-    sourceCodeA.textContent = "Source Code";
-    hamburgerMenu.appendChild(hamburgerElement);
+      'href',
+      'https://github.com/benni347/schule_profil_website/tree/main/2023_03_07/lifeline'
+    )
+    sourceCodeA.textContent = 'Source Code'
+    hamburgerMenu.appendChild(hamburgerElement)
 
     // Add the hamburger menu to the DOM at the appropriate location.
-    parent.insertBefore(hamburgerMenu, circleContainer);
-    parent.removeChild(circleContainer);
+    parent.insertBefore(hamburgerMenu, circleContainer)
+    parent.removeChild(circleContainer)
   } else {
     // Restore the original layout
-    const hamburgerMenu = document.querySelector(".hamburger-menu");
+    const hamburgerMenu = document.querySelector('.hamburger-menu')
     if (hamburgerMenu) {
-      const parent = hamburgerMenu.parentNode;
-      const circleContainer = document.createElement("div");
-      circleContainer.classList.add("circle-container");
-      const circle = document.createElement("div");
-      circle.classList.add("circle");
-      const close = document.createElement("button");
-      close.classList.add("close");
-      const open = document.createElement("button");
-      close.classList.add("open");
+      const parent = hamburgerMenu.parentNode
+      const circleContainer = document.createElement('div')
+      circleContainer.classList.add('circle-container')
+      const circle = document.createElement('div')
+      circle.classList.add('circle')
+      const close = document.createElement('button')
+      close.classList.add('close')
+      const open = document.createElement('button')
+      close.classList.add('open')
 
-      circleContainer.appendChild(circle);
+      circleContainer.appendChild(circle)
       // Add the circle container to the DOM at the appropriate location.
-      parent.insertBefore(circleContainer, hamburgerMenu);
-      parent.removeChild(hamburgerMenu);
+      parent.insertBefore(circleContainer, hamburgerMenu)
+      parent.removeChild(hamburgerMenu)
       /*
 
       <div class="circle-container">
@@ -62,14 +62,11 @@ function updateLayout() {
         </div>
       </div>
 
-
-
-
        */
     }
   }
 }
-window.addEventListener("resize", updateLayout);
+window.addEventListener('resize', updateLayout)
 
 // Initial layout update on page load
-updateLayout();
+updateLayout()
