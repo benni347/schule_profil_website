@@ -17,8 +17,8 @@ body {
     overflow-x: hidden;
 }
 
-#close,
-#open {
+.close,
+.open {
     width: 2.5vw;
     aspect-ratio: 1 / 1;
     filter: invert();
@@ -213,11 +213,11 @@ h2 {
     outline: none;
 }
 
-.circle button#open {
+.circle button.open {
     left: 60%;
 }
 
-.circle button#close {
+.circle button.close {
     top: 60%;
     transform: rotate(90deg);
     transform-origin: top left;
