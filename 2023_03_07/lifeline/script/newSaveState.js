@@ -42,9 +42,7 @@ async function setCurrentSavePointA() {
 
 async function setCurrentSavePointB() {
   const currentString = await retrieveCurrentSavePoints();
-  console.log(currentString);
   const newCurrentString = currentString + "B";
-  console.log("New" + newCurrentString);
   await dbSave.save.put(newCurrentString, "current");
 }
 
@@ -68,7 +66,6 @@ async function setStartPoint() {
   }
 }
 
-console.log("Hello");
 setStartPoint();
 setFirstTimeVisit();
 
@@ -78,7 +75,6 @@ decissionA.addEventListener("click", async () => {
 });
 
 decissionB.addEventListener("click", async () => {
-  console.log("B");
   await setCurrentSavePointB();
   await setAllSavePoints();
 });
