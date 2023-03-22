@@ -2,6 +2,7 @@
 const genderSelect = document.getElementById("gender");
 const ttsTogle = document.getElementById("tts");
 const floatingSettings = document.querySelector(".floating-settings");
+let rangeInput;
 const dbVersion = 3;
 
 // Initialize the Dexie.js database
@@ -39,13 +40,17 @@ async function setTts() {
   await db.tts.put(tts, "tts_enabled");
 }
 
+async function setTtsVolume(volume = 80) {
+  await db.tts.put(volume, "tts_volume");
+}
+
 // Set the start options in the Dexie.js database
 async function setStartOptions() {
   const firstTimeVisit = await retrieveFirstTimeVisit();
   if (firstTimeVisit !== false) {
     await db.gender.put("female", "gender");
     await db.tts.put(true, "tts_enabled");
-    await db.tts.put(1.0, "tts_volume");
+    await db.tts.put(80, "tts_volume");
   }
 }
 
@@ -83,7 +88,7 @@ async function setTtsVolumeVisability() {
       const paragraph = document.createElement("p");
       const summary = document.createElement("summary");
       const div = document.createElement("div");
-      const rangeInput = document.createElement("input");
+      rangeInput = document.createElement("input");
 
       summary.textContent = "TTS";
       paragraph.textContent = "Volume";
@@ -95,10 +100,13 @@ async function setTtsVolumeVisability() {
       rangeInput.setAttribute("max", "100");
       rangeInput.setAttribute("step", "1");
       rangeInput.setAttribute("value", "255");
+      rangeInput.setAttribute("id", "tts_volume_control");
+
       div.appendChild(paragraph);
       div.appendChild(rangeInput);
       newDetails.appendChild(summary);
       newDetails.appendChild(div);
+
       newDetails.setAttribute("id", "tts-details");
       floatingSettings.appendChild(newDetails);
     }
@@ -162,4 +170,14 @@ setTtsVolumeVisability();
 ttsTogle.addEventListener("change", async () => {
   await setTts();
   await setTtsVolumeVisability();
+});
+
+document.addEventListener("DOMContentLoaded", async () => {
+  await setTtsVolumeVisability();
+
+  // listen for the 'input' event on the rangeInput element
+  rangeInput.addEventListener("input", (event) => {
+    console.log(event.target.value);
+    setTtsVolume(event.target.value);
+  });
 });
