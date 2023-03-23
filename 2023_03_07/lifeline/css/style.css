@@ -234,7 +234,7 @@ h2 {
     transition-delay: 0.3s;
 }
 
-.rotating_nav{
+.rotating_nav {
     position: fixed;
     bottom: 40px;
     left: 0;
