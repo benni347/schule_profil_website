@@ -8,7 +8,7 @@
   <link href="css/style.css" rel="stylesheet" />
   <script src="https://kit.fontawesome.com/67727cb6f5.js" crossorigin="anonymous"></script>
   <script src="https://unpkg.com/dexie/dist/dexie.js"></script>
-
+  <link rel="stylesheet" type="text/css" href="css/hamburger.css" />
   <link href="prism/prism.css" rel="stylesheet" />
 </head>
 
@@ -34,6 +34,17 @@
         </div>
       </div>
       <h1 class="title header_child">LIFELINE Game</h1>
+      <nav class="hamburger_nav">
+        <div class="hamburger-menu">
+          <div class="hamburger"><i class="fa-solid fa-bars"></i></div>
+        </div>
+        <ul class="menu">
+          <li><a href="#">Home</a></li>
+          <li><a href="#">About</a></li>
+          <li><a href="#">Services</a></li>
+          <li><a href="#">Contact</a></li>
+        </ul>
+      </nav>
     </header>
     <div class="content">
       <main>
@@ -59,7 +70,7 @@
   </div>
   <!-- Floating window container (initially hidden) -->
 
-  <nav>
+  <nav class="rotating_nav">
     <ul>
       <li>
         <div id="open-settings" class="sideBarElements">
@@ -113,9 +124,9 @@
   <script src="script/floating.js"></script>
   <script src="script/copyright.js"></script>
   <script src="prism/prism.js"></script>
+  <script src="script/responsive.js"></script>
   <script src="script/typing.js"></script>
   <script src="script/newSaveState.js"></script>
-  <script src="script/responsive.js"></script>
 </body>
 
 </html>

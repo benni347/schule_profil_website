@@ -18,11 +18,13 @@ body {
     height: 100%;
     min-height: 100%;
     overflow-x: hidden;
+    overflow-y: hidden;
     user-select: none;
 }
 
 .close,
 .open {
+    z-index: 10;
     width: 2.5vw;
     aspect-ratio: 1 / 1;
     filter: invert();
@@ -232,19 +234,19 @@ h2 {
     transition-delay: 0.3s;
 }
 
-nav {
+.rotating_nav{
     position: fixed;
     bottom: 40px;
     left: 0;
     z-index: 100;
 }
 
-nav ul {
+.rotating_nav ul {
     list-style-type: none;
     padding-left: 30px;
 }
 
-nav ul li {
+.rotating_nav ul li {
     text-transform: uppercase;
     color: #fff;
     margin: 40px 0;
@@ -252,22 +254,22 @@ nav ul li {
     transition: transform 0.4s ease-in;
 }
 
-nav ul a {
+.rotating_nav ul a {
     text-decoration: wavy underline;
     color: white;
 }
 
-nav ul li i {
+.rotating_nav ul li i {
     font-size: 20px;
     margin-right: 10px;
 }
 
-nav ul li + li {
+.rotating_nav ul li + li {
     margin-left: 15px;
     transform: translateX(-250%);
 }
 
-nav ul li + li + li {
+.rotating_nav ul li + li + li {
     margin-left: 30px;
     transform: translateX(-300%);
 }
