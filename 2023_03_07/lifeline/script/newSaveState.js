@@ -72,6 +72,8 @@ setStartPoint();
 setFirstTimeVisit();
 showStory();
 
+// FIXME: The tyepext function, previes multiple times.
+
 decissionA.addEventListener("click", async () => {
   await setCurrentSavePointA();
   await setAllSavePoints();
@@ -135,7 +137,7 @@ async function showStory() {
 
     for (let i = 1; i <= 7; i++) {
       const text = eval("startText" + i);
-
+      // FIXME: THe setTimeout function is called multiple times, without the correct wait time.
       console.info(text);
       setTimeout(() => {
         storyText.setAttribute("data-text", text);
