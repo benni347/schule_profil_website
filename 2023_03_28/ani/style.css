@@ -1,0 +1,181 @@
+body {
+  margin: none
+}
+.wrapper {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  height: 100vh; /* Set the height of the wrapper to the viewport height */
+}
+
+
+.box {
+  width: 15vw;
+  aspect-ratio: 1/1;
+  background-color: rgba(72,209,204,0.9);
+  display: block;
+}
+
+#a1 {
+    animation: filla 2s forwards infinite;
+
+  border-top-left-radius: 60%;
+}
+
+#a2 {
+  animation: filld 2s forwards infinite;
+}
+
+#a3 {
+  animation: fillb 2s forwards infinite;
+}
+
+#a4 {
+    animation: fillc 2s forwards infinite;
+
+  border-bottom-right-radius: 60%;
+}
+
+@keyframes filla {
+  0% {
+      background-color: rgb(100, 10, 255);
+  }
+
+  25% {
+   
+  background-color: rgba(72,209,204,0.9);
+
+  }
+    50% {
+   
+  background-color: rgba(72,209,204,0.9);
+
+  }
+  75% {
+   
+  background-color: rgba(72,209,204,0.9);
+
+  }
+
+  100% {
+
+      background-color: rgb(100, 10, 255);
+  }
+  
+}
+@keyframes fillb {
+  0% {
+  background-color: rgba(72,209,204,0.9);
+  }
+  25% {
+      background-color: rgb(100, 10, 255);
+  }
+
+  50% {
+  background-color: rgba(72,209,204,0.9);
+  }
+  75% {
+   
+  background-color: rgba(72,209,204,0.9);
+
+  }
+  100% {
+
+      background-color:  rgba(72,209,204,0.9);
+  }
+}
+@keyframes fillc {
+  0% {
+  background-color: rgba(72,209,204,0.9);
+  }
+  25% {
+   
+  background-color: rgba(72,209,204,0.9);
+
+  }
+  50% {
+      background-color: rgb(100, 10, 255);
+  }
+
+  75% {
+  background-color: rgba(72,209,204,0.9);
+  }
+  100% {
+
+      background-color:  rgba(72,209,204,0.9);
+  }
+}
+@keyframes filld {
+  0% {
+  background-color: rgba(72,209,204,0.9);
+  }
+  25% {
+      background-color: rgba(72,209,204,0.9);
+
+  }
+    50% {
+      background-color: rgba(72,209,204,0.9);
+
+  }
+  75% {
+      background-color: rgb(100, 10, 255);
+  }
+
+  100% {
+
+  background-color: rgba(72,209,204,0.9);
+  }
+}
+@keyframes spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes changeBackground {
+  0% {
+    background-color: #333;
+  }
+  50% {
+    background-color: #6495ED;
+  }
+  100% {
+    background-color: #FFD700;
+  }
+  /* Add additional keyframes for smooth transition back to beginning */
+}
+
+@keyframes chanePos {
+  0% {
+    left: 50px;
+    top: 50px;
+    background-color: mediumturquoise;
+  }
+
+  25% {
+    left: 150px;
+    top: 50px;
+    transform: scale(1.5);
+    background-color: mediumturquoise;
+  }
+
+  75% {
+    left: 150px;
+    top: 150px;
+        transform: scale(2.);
+
+    background-color: mediumslateblue;
+  }
+
+  100% {
+    left: 50px;
+    top: 150px;
+        transform: scale(2.5);
+
+    background-color: lightslategrey;
+  }
+}
