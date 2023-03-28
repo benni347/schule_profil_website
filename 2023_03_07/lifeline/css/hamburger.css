@@ -1,180 +1,180 @@
 .hamburger-menu > *,
 .menu > * {
-  display: none;
+    display: none;
 }
 
 .hamburger i {
-  transition: transform 0.3s ease-in-out;
+    transition: transform 0.3s ease-in-out;
 }
 
 .hamburger.active i {
-  transform: rotate(45deg);
+    transform: rotate(45deg);
 }
 
 .hamburger_nav {
-  display: none;
+    display: none;
 }
 
 .hamburger.active i:before {
-  transform: translateY(10px) rotate(90deg);
+    transform: translateY(10px) rotate(90deg);
 }
 
 .hamburger.active i:after {
-  transform: translateY(-10px) rotate(90deg);
+    transform: translateY(-10px) rotate(90deg);
 }
 
 @media only screen and (max-width: 720px) {
-  .circle {
-    display: none;
-  }
-  .hamburger-menu > *,
-.menu > * {
-  display: contents;
-}
-.hamburger_nav {
-  display: flex;
-  align-items: center;
-  height: 80px;
-  background-color: #333;
-  color: #fff;
-  width: fit-content;
-  right: 0.5vw;
-  position: absolute;
-  padding: 2%;
-  aspect-ratio: 1/1;
-  justify-content: center;
-}
+    .circle {
+        display: none;
+    }
+    .hamburger-menu > *,
+    .menu > * {
+        display: contents;
+    }
+    .hamburger_nav {
+        display: flex;
+        align-items: center;
+        height: 80px;
+        background-color: #333;
+        color: #fff;
+        width: fit-content;
+        right: 0.5vw;
+        position: absolute;
+        padding: 2%;
+        aspect-ratio: 1/1;
+        justify-content: center;
+    }
 
-.css-r6z5ec {
-  position: absolute;
-  right: 0.25vw;
-  top: 5vh
-}
+    .css-r6z5ec {
+        position: absolute;
+        right: 0.25vw;
+        top: 5vh;
+    }
 
-#__next {
-  position: absolute;
-  top: 5vh;
-  display: none;
-  right: 0.25vw;
-}
+    #__next {
+        position: absolute;
+        top: 5vh;
+        display: none;
+        right: 0.25vw;
+    }
 
-.menu {
-  list-style: none;
-  margin: 0;
-  padding: 0;
-}
+    .menu {
+        list-style: none;
+        margin: 0;
+        padding: 0;
+    }
 
-.menu li {
-  margin: 0;
-}
+    .menu li {
+        margin: 0;
+    }
 
-.menu a {
-  display: block;
-  padding: 20px;
-  color: #fff;
-  text-decoration: none;
-}
+    .menu a {
+        display: block;
+        padding: 20px;
+        color: #fff;
+        text-decoration: none;
+    }
 
-.hamburger-menu {
-  display: block;
-  cursor: pointer;
-}
+    .hamburger-menu {
+        display: block;
+        cursor: pointer;
+    }
 
-.hamburger {
-  width: 25px;
-  height: 3px;
-  margin: 5px 0;
-  transition: transform 0.3s ease-in-out;
-}
+    .hamburger {
+        width: 25px;
+        height: 3px;
+        margin: 5px 0;
+        transition: transform 0.3s ease-in-out;
+    }
 
-/* Rotate the hamburger icon to show the menu when it's clicked */
-.open .hamburger:nth-child(1) {
-  transform: rotate(45deg) translate(5px, 5px);
-}
+    /* Rotate the hamburger icon to show the menu when it's clicked */
+    .open .hamburger:nth-child(1) {
+        transform: rotate(45deg) translate(5px, 5px);
+    }
 
-.open .hamburger:nth-child(2) {
-  opacity: 0;
-}
+    .open .hamburger:nth-child(2) {
+        opacity: 0;
+    }
 
-.open .hamburger:nth-child(3) {
-  transform: rotate(-45deg) translate(5px, -5px);
-}
+    .open .hamburger:nth-child(3) {
+        transform: rotate(-45deg) translate(5px, -5px);
+    }
 
-/* Show the menu when the hamburger icon is clicked */
-.open .menu {
-  display: block;
-}
+    /* Show the menu when the hamburger icon is clicked */
+    .open .menu {
+        display: block;
+    }
 }
 
 @media only screen and (max-aspect-ratio: 9 / 16) {
     .circle {
-    display: none;
-  }
-  .hamburger-menu > *,
-.menu > * {
-  display: contents;
-}
-.hamburger_nav {
-  display: flex;
-  align-items: center;
-  height: 80px;
-  background-color: #333;
-  color: #fff;
-  width: fit-content;
-  right: 0.5vw;
-  position: absolute;
-  padding: 2%;
-  aspect-ratio: 1/1;
-  justify-content: center;
-}
+        display: none;
+    }
+    .hamburger-menu > *,
+    .menu > * {
+        display: contents;
+    }
+    .hamburger_nav {
+        display: flex;
+        align-items: center;
+        height: 80px;
+        background-color: #333;
+        color: #fff;
+        width: fit-content;
+        right: 0.5vw;
+        position: absolute;
+        padding: 2%;
+        aspect-ratio: 1/1;
+        justify-content: center;
+    }
 
-.menu {
-  display: none;
-  list-style: none;
-  margin: 0;
-  padding: 0;
-}
-.open .menu {
-  display: contents;
-}
-.menu li {
-  margin: 0;
-}
+    .menu {
+        display: none;
+        list-style: none;
+        margin: 0;
+        padding: 0;
+    }
+    .open .menu {
+        display: contents;
+    }
+    .menu li {
+        margin: 0;
+    }
 
-.menu a {
-  display: block;
-  padding: 20px;
-  color: #fff;
-  text-decoration: none;
-}
+    .menu a {
+        display: block;
+        padding: 20px;
+        color: #fff;
+        text-decoration: none;
+    }
 
-.hamburger-menu {
-  display: block;
-  cursor: pointer;
-}
+    .hamburger-menu {
+        display: block;
+        cursor: pointer;
+    }
 
-.hamburger {
-  width: 25px;
-  height: 3px;
-  margin: 5px 0;
-  transition: transform 0.3s ease-in-out;
-}
+    .hamburger {
+        width: 25px;
+        height: 3px;
+        margin: 5px 0;
+        transition: transform 0.3s ease-in-out;
+    }
 
-/* Rotate the hamburger icon to show the menu when it's clicked */
-.open .hamburger:nth-child(1) {
-  transform: rotate(45deg) translate(5px, 5px);
-}
+    /* Rotate the hamburger icon to show the menu when it's clicked */
+    .open .hamburger:nth-child(1) {
+        transform: rotate(45deg) translate(5px, 5px);
+    }
 
-.open .hamburger:nth-child(2) {
-  opacity: 0;
-}
+    .open .hamburger:nth-child(2) {
+        opacity: 0;
+    }
 
-.open .hamburger:nth-child(3) {
-  transform: rotate(-45deg) translate(5px, -5px);
-}
+    .open .hamburger:nth-child(3) {
+        transform: rotate(-45deg) translate(5px, -5px);
+    }
 
-/* Show the menu when the hamburger icon is clicked */
-.open .menu {
-  display: block;
-}
+    /* Show the menu when the hamburger icon is clicked */
+    .open .menu {
+        display: block;
+    }
 }
