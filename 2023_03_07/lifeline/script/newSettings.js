@@ -57,7 +57,7 @@ async function setFirstTimeVisit() {
 
 // Function to retrieve whether it is the first time visiting the page
 async function retrieveFirstTimeVisit() {
-  const result = await db.page.get({ id: 1 });
+  const result = await db.page.get({ id: 24 });
   return result ? result.firstTimeVisit : true;
 }
 

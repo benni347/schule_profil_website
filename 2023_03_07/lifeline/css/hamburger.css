@@ -11,6 +11,10 @@
   transform: rotate(45deg);
 }
 
+.hamburger_nav {
+  display: none;
+}
+
 .hamburger.active i:before {
   transform: translateY(10px) rotate(90deg);
 }
@@ -40,8 +44,21 @@
   aspect-ratio: 1/1;
   justify-content: center;
 }
-.menu {
+
+.css-r6z5ec {
+  position: absolute;
+  right: 0.25vw;
+  top: 5vh
+}
+
+#__next {
+  position: absolute;
+  top: 5vh;
   display: none;
+  right: 0.25vw;
+}
+
+.menu {
   list-style: none;
   margin: 0;
   padding: 0;

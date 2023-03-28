@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" style="color-scheme: dark" data-theme="dark" lang="en">
 
 <head>
   <title>LIFELINE</title>
@@ -10,9 +10,105 @@
   <script src="https://unpkg.com/dexie/dist/dexie.js"></script>
   <link rel="stylesheet" type="text/css" href="css/hamburger.css" />
   <link href="prism/prism.css" rel="stylesheet" />
+  <style data-emotion="css-global" data-s="">
+    :root,
+    [data-theme] {
+      --chakra-colors-whiteAlpha-300: rgba(255, 255, 255, 0.16);
+      --chakra-colors-whiteAlpha-100: rgba(255, 255, 255, 0.06);
+      --chakra-colors-gray-700: #2d3748;
+      --chakra-radii-md: 0.375rem;
+      --chakra-sizes-3xs: 14rem;
+    }
+
+    [data-theme][data-theme="dark"] {
+      --chakra-colors-chakra-border-color: var(--chakra-colors-whiteAlpha-300);
+    }
+
+    html {
+      line-height: 1.5;
+      touch-action: manipulation;
+    }
+
+    *,
+    *::before,
+    *::after {
+      border-width: 0;
+      border-style: solid;
+      box-sizing: border-box;
+    }
+
+    *,
+    *::before,
+    ::after {
+      border-color: var(--chakra-colors-chakra-border-color);
+    }
+
+    .css-vwpqzm {
+      width: 100%;
+      margin-inline-start: auto;
+      margin-inline-end: auto;
+      max-width: var(--chakra-sizes-container-md);
+      padding-inline-start: 1rem;
+      padding-inline-end: 1rem;
+      display: flex;
+      padding: var(--chakra-space-2);
+    }
+
+    .css-1ieeump {
+      outline: 2px solid transparent;
+      outline-offset: 2px;
+      background: var(--chakra-colors-gray-700);
+      color: inherit;
+      min-width: var(--chakra-sizes-3xs);
+      border-radius: var(--chakra-radii-md);
+      border-width: 1px;
+    }
+
+    .css-bt4mvv {
+      cursor: pointer;
+      text-decoration: none;
+      text-underline-offset: 3px;
+      color: inherit;
+      display: flex;
+      width: 100%;
+      align-items: center;
+      text-align: start;
+      outline: 2px solid transparent;
+      outline-offset: 2px;
+      padding-top: 0.4rem;
+      padding-bottom: 0.4rem;
+      padding-inline-start: 0.8rem;
+      padding-inline-end: 0.8rem;
+    }
+
+    .css-bt4mvv:focus,
+    .css-bt4mvv[data-focus] {
+      background: var(--chakra-colors-whiteAlpha-100);
+    }
+
+    .css-bt4mvv:hover,
+    .css-bt4mvv[data-hover] {
+      text-decoration: underline;
+    }
+
+    .css-bt4mvv:focus-visible,
+    .css-bt4mvv[data-focus-visible] {
+      box-shadow: var(--chakra-shadows-outline);
+    }
+
+    .css-bt4mvv:active,
+    .css-bt4mvv[data-active] {
+      background: var(--chakra-colors-whiteAlpha-200);
+    }
+
+    .css-bt4mvv[data-expanded] {
+      background: var(--chakra-colors-whiteAlpha-100);
+    }
+  </style>
+
 </head>
 
-<body>
+<body class="chakra-ui-dark">
   <div class="grid_container settings_hidden container">
     <header class="header header_grid_container">
       <div class="circle-container">
@@ -38,27 +134,54 @@
         <div class="hamburger-menu">
           <div class="hamburger"><i class="fa-solid fa-bars"></i></div>
         </div>
+        <div id="__next" class="menu">
+          <div class="chakra-container css-vwpqzm" wrap="wrap" justify="space-between" align="center">
+            <div class="css-r6z5ec" data-popper-placement="bottom-end">
+              <div tabindex="-1" role="menu" id="menu-list-:Rlel9f6H1:"
+                style="transform-origin: var(--popper-transform-origin); opacity: 0.944444; visibility: visible; transform: scale(0.988889) translateZ(0px);"
+                aria-orientation="vertical" class="chakra-menu__menu-list css-1ieeump">
+                <a class="chakra-link chakra-menu__menuitem css-bt4mvv" href="https://cedric.skwar.me/"
+                  id="menu-list-:Rlel9f6H1:-menuitem-:Rpllel9f6:" role="menuitem" tabindex="1" data-index="0">About</a>
+                <a class="chakra-link chakra-menu__menuitem css-bt4mvv" href="https://cedric.skwar.me/works"
+                  id="menu-list-:Rlel9f6H1:-menuitem-:R19llel9f6:" role="menuitem" tabindex="1" data-index="1">Works</a>
+                <a class="chakra-link chakra-menu__menuitem css-bt4mvv" href="https://cedric.skwar.me/posts"
+                  id="menu-list-:Rlel9f6H1:-menuitem-:R1pllel9f6:" role="menuitem" tabindex="1" data-index="2">Posts</a>
+                <a class="chakra-link chakra-menu__menuitem css-bt4mvv"
+                  href="https://github.com/benni347/schule_profil_website/tree/main/2023_03_07/lifeline"
+                  id="menu-list-:Rlel9f6H1:-menuitem-:R39llel9f6:" role="menuitem" tabindex="1" data-index="1">View
+                  Source</a>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!--
         <ul class="menu">
           <li><a href="#">Home</a></li>
           <li><a href="#">About</a></li>
           <li><a href="#">Services</a></li>
           <li><a href="#">Contact</a></li>
-        </ul>
+        </ul> -->
       </nav>
     </header>
     <div class="content">
       <main>
         <div class="main-story-text">
-          <p class="story-text typing-animation"
-            data-text="Jane Muror had trained her entire life for this moment. As she sat in the cockpit of her spacecraft, she couldn't help but feel a sense of excitement and nervousness. She was embarking on a mission to fly to Jupiter's moon IO, a journey that would take her farther into space than anyone had ever gone before.">
+          <p id="story-text" class="story-text typing-animation" data-text="">
           </p>
         </div>
         <div class="main-story-decission-container">
           <div class="decission-a">
-            <button type="button" class="decission-a-button">Lorem</button>
+            <button type="button" class="decission-a-button btn-18">
+              <span class="text-container">
+                <span class="text decission-a-text"></span>
+              </span>
+            </button>
           </div>
           <div class="decission-b">
-            <button type="button" class="decission-b-button">Lorem</button>
+            <button type="button" class="decission-b-button btn-18">
+              <span class="text-container">
+                <span class="text decission-b-text"></span>
+              </span></button>
 
           </div>
         </div>
